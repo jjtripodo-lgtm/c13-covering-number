@@ -1,0 +1,17 @@
+{
+  "status": "NOT_SUBMITTED_UPLOAD_BLOCKED",
+  "manuscript_commit": "20ccbe34b49b2ebcac19aabb39e2920d3de66862",
+  "source_zip": "paper/C13_hexagon_source.zip",
+  "public_lean_commit": "254ee82fdbc215ad73f732f807a83d69be7c1e22",
+  "completed": [
+    "Public manuscript and Lean source publication",
+    "Ten-page reader-perspective and visual review",
+    "Fresh Python normal/optimized and native C++/UBSan replay",
+    "Claude and ChatGPT/Codex acknowledgments",
+    "Hexagon metadata and provenance form prepared"
+  ],
+  "blocker": "Hexagon rejected Process with 'Choose one or more source files or a source directory' despite displayed selected ZIP. Browser download fallback timed out. No successful compile or final submission in this attempt.",
+  "next_step": "Attach published source ZIP to prepared form, process compilation, inspect compiled PDF and rendered metadata, then submit.",
+  "human_understanding": "none attested",
+  "fresh_lean_build": "not run"
+}
