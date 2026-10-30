@@ -1,7 +1,7 @@
 {
-  "status": "NOT_SUBMITTED_UPLOAD_BLOCKED",
+  "status": "DRAFT_COMPILED_OLDER_MANUSCRIPT_REPLACEMENT_REQUIRED",
   "manuscript_commit": "20ccbe34b49b2ebcac19aabb39e2920d3de66862",
-  "source_zip": "paper/C13_hexagon_source.zip",
+  "source_zip": "paper/C13_reviewed_10page_source.zip",
   "public_lean_commit": "254ee82fdbc215ad73f732f807a83d69be7c1e22",
   "completed": [
     "Public manuscript and Lean source publication",
@@ -10,8 +10,10 @@
     "Claude and ChatGPT/Codex acknowledgments",
     "Hexagon metadata and provenance form prepared"
   ],
-  "blocker": "Hexagon rejected Process with 'Choose one or more source files or a source directory' despite displayed selected ZIP. Browser download fallback timed out. No successful compile or final submission in this attempt.",
-  "next_step": "Attach published source ZIP to prepared form, process compilation, inspect compiled PDF and rendered metadata, then submit.",
+  "blocker": "The attached 70 KiB ZIP compiles to the older nine-page manuscript. Its 26 KiB C13_manuscript.tex matches the earlier package, without the public repository link or Claude/ChatGPT acknowledgments. It must be replaced before submission. Browser download automation timed out.",
+  "next_step": "Replace staged ZIP with paper/C13_reviewed_10page_source.zip (11569 bytes, main.tex only), compile, inspect the ten-page preview and submit.",
   "human_understanding": "none attested",
-  "fresh_lean_build": "not run"
+  "fresh_lean_build": "not run",
+  "current_hexagon_preview_pages": 9,
+  "reviewed_manuscript_pages": 10
 }
