@@ -1,0 +1,49 @@
+{
+  "external_referee_review": "NOT_PERFORMED",
+  "lean_rebuild": "NOT_RUN; not needed by computational proof",
+  "manifest_files": 69,
+  "native_requested": true,
+  "published_classification": "External theorem input; not proved by this driver",
+  "runs": {
+    "adversarial": {
+      "exit_code": 0,
+      "seconds": 1.645
+    },
+    "adversarial-O": {
+      "exit_code": 0,
+      "seconds": 1.658
+    },
+    "independent": {
+      "exit_code": 0,
+      "seconds": 98.007
+    },
+    "independent-O": {
+      "exit_code": 0,
+      "seconds": 95.094
+    },
+    "native": {
+      "native_compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+      "native_manifest_files_verified": 26,
+      "native_optimized_ubsan_equivalence": true,
+      "native_output_sha256": "b06bc67b873b1969da5b0219af89fa9a7c955573084af0855333285e43b368ff",
+      "native_status": "PASS_COMPILED_DOMAIN_AND_GLOBAL_CENSUS_CROSSCHECK"
+    },
+    "primary": {
+      "exit_code": 0,
+      "seconds": 69.322
+    },
+    "primary-O": {
+      "exit_code": 0,
+      "seconds": 70.817
+    },
+    "tests-normal": {
+      "exit_code": 0,
+      "seconds": 1.853
+    },
+    "tests-optimized": {
+      "exit_code": 0,
+      "seconds": 1.994
+    }
+  },
+  "status": "PASS_PORTABLE_C13_REPLAY"
+}

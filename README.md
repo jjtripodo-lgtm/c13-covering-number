@@ -6,7 +6,7 @@
 
 This repository contains a classification-assisted computational proof that 30 seven-element blocks are necessary and sufficient to cover all four-element subsets of a thirteen-point set. The contribution is the exclusion of 29 blocks. The 30-block construction is previously known and credited to the La Jolla Covering Repository's Nurmela–Östergård construction.
 
-The argument uses Gordon, Patashnik, Petro and Taylor's published minimum bound and classification of (12,6,3) covers. It does not claim a new proof of that classification. No external human specialist review is claimed, and the manuscript has not been resubmitted to Hexagon after the owner cancelled the earlier submission.
+The argument uses Gordon, Patashnik, Petro and Taylor's published minimum bound and classification of (12,6,3) covers. It does not claim a new proof of that classification. No external human specialist review is claimed, and the revised manuscript is prepared for Hexagon submission.
 
 ## Read the result
 
@@ -28,8 +28,6 @@ The first command authenticates all 1,751 unchanged Lean source modules, checks 
 
 For Lean, see [lean/README.md](lean/README.md). The exact endpoint is `C13.Global.exact30_after_published_results` in [Final.lean](lean/C13Global/Final.lean). Its hypotheses are `PublishedMinimumBound` and `PublishedClassification1995`. The one-predicate corollary retains the classification predicate and its documented source-level caveat.
 
-The immutable Lean proof-source snapshot is [commit `254ee82fdbc2`](https://github.com/jjtripodo-lgtm/c13-covering-number/tree/254ee82fdbc215ad73f732f807a83d69be7c1e22/lean).
-
 ## Assurance at this release
 
 - All exported local Lean sources match both their original Git blobs and source digests in the historical replay receipt.
@@ -43,4 +41,4 @@ The immutable Lean proof-source snapshot is [commit `254ee82fdbc2`](https://gith
 
 Paper: [CC BY 4.0](LICENSE-PAPER). Authored code and Lean formalization: [MIT](LICENSE). Upstream dependencies retain their own licenses and are not vendored here. Literal combinatorial data are credited to their sources. Dated original audit documents are retained as historical records; their pre-publication administrative statements predate this authorized release.
 
-This work used substantial OpenAI ChatGPT/Codex assistance. No part is represented as checked and understood by a human. Automated verification and independently structured programs do not constitute independent human peer review.
+This work used substantial Anthropic Claude and OpenAI ChatGPT/Codex assistance. No part is represented as checked and understood by a human. Automated verification and independently structured programs do not constitute independent human peer review.

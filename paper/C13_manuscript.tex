@@ -6,7 +6,7 @@
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage{booktabs,array,graphicx,microtype,xcolor,longtable}
 \usepackage[hidelinks]{hyperref}
-\hypersetup{pdftitle={The covering number C(13,7,4) is 30},pdfsubject={Covering designs and exact finite verification}}
+\hypersetup{pdftitle={The covering number C(13,7,4) is 30},pdfauthor={John Tripodo},pdfsubject={Covering designs and exact finite verification}}
 \setlength{\parskip}{2.3pt}
 \setlength{\parindent}{15pt}
 \newcommand{\bin}[2]{\binom{#1}{#2}}
@@ -30,28 +30,23 @@
 \title{\vspace{-1.3em}\bfseries The covering number $C(13,7,4)$ is $30$\\[0.32em]
 \large\normalfont A classification-assisted exact proof}
 \author{John Tripodo\\\small ORCID: \href{https://orcid.org/0009-0006-9180-4953}{0009-0006-9180-4953}}
-\date{29 October 2026\\\small Public proof-source edition; preprint for review}
+\date{29 October 2026}
 \begin{document}
 \maketitle
 \vspace{-1.3em}
 \begin{abstract}\noindent
-We prove that $C(13,7,4)=30$, using the published classification of
-minimum $(12,6,3)$ coverings. Incidence counting forces a hypothetical
-$29$-block cover to have at least five points of degree $15$.
-The link at one such point is classified, while the other four force
-complete families of outside blocks with mutually consistent overlaps.
-There are only $14$ outside blocks available. An exact enumeration
-over all $68\binom{12}{4}=33{,}660$ labelled root configurations
-finds that every compatible four-pencil tuple requires $15$ outside
-blocks, a contradiction. An explicit known $30$-block cover supplies
-the upper bound. We provide two separately structured Python
-verifiers and a public Lean formalization of a second, actual-cover
-certificate argument. The Lean endpoint has the published minimum
-bound and classification as explicit hypotheses; its internal finite
-census is fully discharged. The released source closure, dependency
-pins, exact theorem correspondence and historical axiom audit make
-that boundary inspectable. The 1995 classification is not re-proved
-in this work.
+We prove that $C(13,7,4)=30$, using the classification of minimum
+$(12,6,3)$ coverings by Gordon, Patashnik, Petro and Taylor.
+A hypothetical $29$-block cover has at least five points lying in exactly
+$15$ blocks. The link at one of these points leaves only $14$ blocks
+outside it. The other four points force complete families of outside
+blocks whose overlaps must agree. An exhaustive computation shows that
+every compatible choice requires $15$ outside blocks, giving a
+contradiction. The known $30$-block construction is therefore optimal.
+We give reproducible exact computations and a public Lean formalization
+of a second argument for the finite obstruction. The Lean theorem
+states the published minimum bound and classification as explicit
+hypotheses; it does not reprove those results.
 \end{abstract}
 \noindent\textbf{Keywords:} covering designs; covering numbers; finite classification;
 exact enumeration; computational proof; Lean formalization.
@@ -75,10 +70,8 @@ An explicit construction supplies the upper bound $30$; the contribution
 is the global exclusion of $29$ blocks. Prior tabulations gave the interval
 $28\leq C(13,7,4)\leq30$ \cite{LJCR}, and a separately published,
 formally checked elimination of one minimum-link type does not resolve
-all $68$ types \cite{Dwares}. The present argument eliminates all types,
-not merely one restricted instance. Related recent work on a different
-covering number illustrates the increasing role of independently checked
-finite certificates in design theory \cite{Krug}.
+all $68$ types \cite{Dwares}. Krug recently determined the different covering number
+$C(12,6,4)=41$ \cite{Krug}.
 
 The one external mathematical ingredient is the work of Gordon,
 Patashnik, Petro and Taylor \cite{GPPT}: their Theorem 4.4 proves
@@ -89,7 +82,7 @@ are \emph{input}, not an original classification claimed here.
 The proof below explains why that classification is enough and
 isolates the precise role of the computation.
 
-\paragraph{Proof in one paragraph.}
+\paragraph{Outline of the proof.}
 Every point of a hypothetical $29$-block covering occurs in at least
 $15$ blocks, and there are only eight degree units above that baseline;
 hence at least five points have degree exactly $15$. Root at one such
@@ -196,10 +189,10 @@ that avoid $\infty$. Reattaching $q$ to their images gives
 \eqref{eq:pencil}, which is exactly $P_q$.
 \end{proof}
 
-The word \emph{unrestricted} in this construction is essential.
-The full map on the other eleven source points is searched, subject
-to exact star equality. Restricting $\phi$ to a convenient
-automorphism subgroup would not by itself justify exhaustiveness.
+The enumeration searches all bijections on the remaining eleven
+source points that satisfy the star equality. This is needed for
+Lemma~\ref{lem:domain}: searching only a chosen automorphism subgroup
+would not suffice.
 
 \paragraph{Equivariance of domain reuse.}
 The implementations may reuse a domain when two known stars are
@@ -264,14 +257,12 @@ Inputs retained for the final four-way join & 42\\
 Total: $68\bin{12}{4}$ & 33,660\\
 \bottomrule
 \end{tabular}
-\caption{Disjoint partition of the complete Python/C++ finite search.
-The last line is an exhaustive total, not an extrapolation from
-representative foursets.}\label{tab:filter}
+\caption{Partition of all labelled root/four-set inputs in the finite search.}\label{tab:filter}
 \end{table}
 
 For each of the $42$ residual inputs, a separately written routine
 constructs all six pair-compatibility relations and enumerates every
-four-pencil tuple satisfying them. Importantly, this final routine
+four-pencil tuple satisfying them. This final routine
 \emph{does not prune by union size}; it computes the literal union
 after joining. Its result is:
 \begin{table}[ht]
@@ -422,7 +413,7 @@ The following modules are under \path{lean/} in the public repository.
 The correspondence is semantic; it does not assert that the Lean
 certificate search follows the Python search instruction for instruction.
 \begin{center}\small
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.42\linewidth}>{\raggedright\arraybackslash}p{0.53\linewidth}@{}}
+\begin{tabular}{@{}p{0.42\linewidth}p{0.53\linewidth}@{}}
 \toprule
 Mathematical step & Formal source\\
 \midrule
@@ -458,64 +449,60 @@ Theorem~5.9 is independent of Theorem~4.4, nor a new proof of the
 1995 classification.
 
 \section{Reproducibility, assurance and limitations}\label{sec:release}
-\subsection{Public source and exact identities}
-The paper, formalization, verification programs, and versioned
-manifests are available at
+The paper, Lean sources and verification programs are available at
 \begin{center}\small
 \url{https://github.com/jjtripodo-lgtm/c13-covering-number}.
 \end{center}
-The immutable proof-source snapshot is
-\href{https://github.com/jjtripodo-lgtm/c13-covering-number/tree/254ee82fdbc215ad73f732f807a83d69be7c1e22/lean}{commit \texttt{254ee82fdbc2}}.
-The Lean export contains $1{,}751$ local source modules. Each file
-is bound to its original Git blob and SHA-256 digest in
-\path{verification/}\\\path{lean_source_manifest.json}. The export changes
-package layout and build configuration, not theorem source bytes.
-All local imports resolve inside the public package. External
-dependencies are revision-pinned; no private repository is needed.
-The release identity and the tests actually performed are recorded
-separately from the inherited build evidence.
+The formalization cited here is frozen at public commit
+\begin{center}\small\ttfamily
+254ee82fdbc215ad73f732f807a83d69be7c1e22
+\end{center}
+The
+\href{https://github.com/jjtripodo-lgtm/c13-covering-number/blob/254ee82fdbc215ad73f732f807a83d69be7c1e22/lean/C13Global/Final.lean}{main theorem}
+is directly accessible. The repository also provides a paper-to-proof map,
+pinned dependencies, and commands for reproducing the checks
+(Appendix~\ref{app:reproduce}). No private repository is required.
 
-\subsection{Verification layers}
-The Python proof reconstructs the domains in two different ways,
-compares all $816$ normalized domains, and runs the unpruned
-compatible-tuple join. Normal and optimized Python runs are compared
-with frozen receipts. The source packet also preserves a distinct
-native C++ replay. The known upper-bound cover is checked on all
-$715$ quadruples; corrupt-input and brute-force differential
-controls exercise both domain generation and the join.
+The Python computations were rerun for this edition in both ordinary and
+optimized modes, including the independent domain reconstruction and
+unpruned join. They reproduce Tables~\ref{tab:filter} and~\ref{tab:join}.
+The native C++ implementation agrees. The known upper-bound construction
+passes all $715$ coverage tests; malformed inputs and small brute-force
+comparisons test the verification routines.
 
-The historical Lean audit checked $76{,}982$ imported project
-declarations in $1{,}750$ modules. Its allowed axiom set is
-\texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound};
-unsafe declarations and other axioms are rejected. The exact
-compressed audit log is public. A later recorded replay rechecked
-the endpoint and negative controls with source/object-bound cached
-dependencies; it did not rebuild all imported proofs. Neither
-record is relabelled as a fresh build of this newly packaged public
-repository. The release verifier authenticates the historical log
-and checks the exported source identities; it does not itself
-execute Lean. The pinned build instructions allow that check to be
-repeated in a Lean-equipped environment.
+For Lean, the release includes $1{,}751$ unchanged local source modules,
+authenticated against their original Git objects and recorded source
+hashes. The preserved historical audit checked $76{,}982$ project
+declarations in $1{,}750$ modules, allowing only \texttt{propext},
+\texttt{Classical.choice} and \texttt{Quot.sound}, with no unsafe project
+declarations. A later recorded check recompiled the endpoint and ran
+negative controls using authenticated cached dependencies. These records
+are not a fresh build of the new public package: that build has not been
+run in this release environment. The distinction is recorded alongside
+the source and reproduction instructions.
 
-\subsection{Source and review boundaries}
-The published $C(12,6,3)=15$ theorem and full link classification
-remain external mathematical inputs. The author-posted preprint
-was checked for the relevant theorem wording in preparing this
-edition; its Figure~1/Figure~6 literal transcriptions remain
-explicitly available for independent comparison. A source hash
-authenticates a transcription, not its fidelity to a historical
-figure. The publication audit distinguishes historical source
-checking from fresh computational replay.
+Both arguments rely on the published minimum bound and classification.
+The literal input families are printed in Appendix~\ref{app:literal};
+the repository preserves the source-transcription audit. The theorem
+wording was checked against the author-posted preprint for this edition,
+but a fresh visual comparison of its figures was not completed. This
+result determines one covering number and does not classify all optimal
+$30$-block covers.
 
-The manuscript, code and formalization were developed with
-substantial OpenAI ChatGPT and Codex assistance. The author directs the
-project; no part is represented as having been checked and understood
-by a human. Independently structured programs and automated audits
-are not independent human refereeing. No external specialist review,
-exhaustive worldwide priority clearance, or journal acceptance is
-claimed. This result determines one covering number; it does not
-classify all optimal $30$-block covers.
+\begingroup\interlinepenalty=10000
+\section*{Acknowledgments and use of AI}
+The author thanks the authors of the published classification and the
+maintainers of the La Jolla Covering Repository for making their work
+available. Anthropic Claude and OpenAI ChatGPT/Codex were used extensively
+in developing the arguments, programs, formalization, and manuscript.
+The text is primarily AI-generated. John Tripodo directed the project
+and is responsible for the submitted work. No part of the contribution
+is attested as having been checked and understood by a human, and no
+independent human referee review is claimed. The computational checks
+and recorded Lean audits described above are separate forms of evidence.
+\endgroup
 
+\clearpage
 \appendix
 \section[An explicit optimal 30-block covering]{An explicit optimal $30$-block covering}\label{app:cover}
 The blocks below are the published Nurmela--\"Osterg\r{a}rd
@@ -555,69 +542,47 @@ The example is different from the separate $30$-block cover in
 \path{known30_control.json}. Both were checked independently on all $715$
 four-subsets in the preparation packet.
 
-\section{Computational protocol and frozen identifiers}\label{app:reproduce}
-The accompanying supplement preserves the exact lower-bound source tree
-under \path{computation/source/research/horizonmath/}\\\path{c13_classified_pencils/}.
-Its \path{computation/reproduce.py} runs the portable checks from an unpacked
-copy without access to the private repository.
-The source snapshot is research-lab commit
-\path{fabd230929bf17b95d6c74d738f78c553c2e0216}.
-The two verifier entry points are
-\path{verify_pencils.py} and \path{independent_raw_replay.py};
-the independent join is in \path{peer_union_join.py}.
-The frozen inputs and file hashes are recorded in
-\path{minimum_link_catalog.json},
-\path{domain_reconstruction_receipt.json}, and
-\path{verification_manifest.json}.
-The manifest identifies both program inputs and replay outputs.
-
-From that directory, the documented portable commands are:
+\section{Reproducing the computations and formal proof}\label{app:reproduce}
+Download the public repository linked in Section~\ref{sec:release}.
+From its top-level directory, run:
 \begin{verbatim}
-python3 verify_pencils.py > primary.json
-python3 -O verify_pencils.py > primary-O.json
-python3 independent_raw_replay.py > independent.json
-python3 -O independent_raw_replay.py > independent-O.json
-cmp primary.json primary-O.json
-cmp independent.json independent-O.json
-python3 -m unittest -v test_classified_pencils.py
+python3 verify_release.py
+python3 computation/reproduce.py
+python3 computation/reproduce.py --native
 \end{verbatim}
-The historical production release gate additionally records a native
-C++ cross-check. The published-dependency audit is in
-\texttt{classification\_dependency\_lock.py}. The independent
-joining routine must count only \emph{actually compatible} tuples;
-its reported Cartesian potential is not the number of checked tuples.
+The first command checks source hashes, local Lean imports, dependency
+pins and the preserved historical axiom log; it does not run Lean.
+The second runs the exact Python proof, checks both ordinary and
+optimized executions against frozen outputs, and runs the controls.
+The optional third command adds the C++ and undefined-behaviour-sanitizer
+cross-checks; it requires a C++17 compiler and OpenSSL development files.
+The Python checks use only the standard library and run without network
+access. Each run writes its outputs and a machine-readable receipt to
+\path{computation/replay-output/}.
 
-\medskip\noindent
-\textbf{Pinned identity data (original research snapshot):}
-\begin{center}\small
-\begin{tabular}{@{}p{0.41\linewidth}p{0.51\linewidth}@{}}
-\toprule
-Item & Frozen identifier or exact invariant\\
-\midrule
-Research-lab C13 checkpoint & \texttt{eec0acba559a732c98babfab497e884fc2fe9e20}\\
-All root/fourset positions & $33{,}660$\\
-Unpruned compatible tuples & $280{,}152$; every union has size $15$\\
-Lean entry module & \path{C13Global/Final.lean}\\
-Lean fixed main theorem & \path{exact30_after_published_results}\\
-\bottomrule
-\end{tabular}
-\end{center}
-The primary reconstruction domain's complete SHA-256 is the concatenation
-of the following two 32-character hexadecimal strings, in order:
-\begin{center}\small\ttfamily
-425ec3b48e8eecdcc3eb5ac1dbe2555b\\
-28420967ea7db00cb690c1e44ddbcb5e
-\end{center}
-The Lean entry module is in package
-\path{c13-covering-lean/global-census-20261010}.
-The table records existing-source evidence; it is not a claim that
-the entire private lower-bound computation or Lean package was newly
-re-executed for this manuscript revision. The accompanying dated audit records the fresh executions performed for
-this revision, separately from historical Lean assurance.
-The Lean package is not required to reproduce the computational proof
-presented in this paper.
+The lower-bound programs are \path{verify_pencils.py} and
+\path{independent_raw_replay.py}; the independent unpruned join is in
+\path{peer_union_join.py}. They reside in the repository's
+\path{computation/source/research/horizonmath/c13_classified_pencils/}
+directory. The input catalog, domain digests and expected outputs are
+listed in the manifests alongside them. These identities distinguish a
+reproduction of the released computation from a run on altered inputs.
 
-\section{Literal classification input}
+For the formal proof, install the version in \path{lean/lean-toolchain}
+and obtain the revision-pinned dependencies in \path{lean/lake-manifest.json}.
+Then, from \path{lean/}, run:
+\begin{verbatim}
+lake build C13Global.Final C13Global.Statistics
+lake env lean --trust=0 -j 1 -M3072 C13Global/AuditFinal.lean
+\end{verbatim}
+Start with no local build objects to recompile the included proof modules.
+Using upstream Mathlib caches does not rebuild Mathlib itself; a complete
+source rebuild must also rebuild the upstream dependencies. The original
+checks used a 3~GiB per-process memory cap. Resource requirements and the
+historical check boundaries are documented in \path{lean/README.md}.
+The Lean package is not required to reproduce the Python proof.
+
+\section{Literal classification input}\label{app:literal}
 For transcription checking, the Figure~1 core is the following list on
 $\{0,1,\ldots,9,A,B\}$, with $A=10$ and $B=11$:
 \begin{center}\ttfamily\small
@@ -662,9 +627,8 @@ for each root link L in the 68-link catalog:\\
 Arc-consistency deletion is valid by the induction in the proof of
 Proposition~\ref{prop:finite}. Domain construction is exhaustive by
 Lemma~\ref{lem:domain}, \emph{provided} the cited published
-classification is correct and fully transcribed. The final join does
-not assume a solver's answer is valid merely because it says
-``infeasible.''
+classification is correct and fully transcribed. The final join enumerates compatible tuples directly; it uses no
+external infeasibility oracle.
 
 \begin{thebibliography}{9}
 \bibitem{GPPT}

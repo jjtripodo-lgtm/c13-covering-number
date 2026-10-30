@@ -1,0 +1,24 @@
+{
+  "status": "PASS_EDITORIAL_AND_COMPUTATIONAL_CHECKS",
+  "review_kind": "AI reader-perspective and visual review; not human specialist refereeing",
+  "paper_pages": 10,
+  "tex_sha256": "7bff3944a356c07fe79951f3dfdc788c6e54a8a782094461f188b31023c3051a",
+  "pdf_sha256": "34d985176969fdaba2e8650d1168c1f043f0aab06eccefe7dfae9680524fdcee",
+  "proof_commit": "254ee82fdbc215ad73f732f807a83d69be7c1e22",
+  "latex_overfull_boxes": 0,
+  "unresolved_references": 0,
+  "reviewed": [
+    "All ten rendered pages",
+    "Argument, definitions and logical order",
+    "Separate Python and Lean certificate counts",
+    "Explicit published classification hypotheses",
+    "Prior-work credit and known upper-bound attribution",
+    "Direct immutable public Lean link",
+    "Runnable public reproduction instructions",
+    "Claude and ChatGPT/Codex acknowledgment",
+    "Human-understanding declaration preserved as none"
+  ],
+  "fresh_lean_build": "NOT_RUN; toolchain unavailable",
+  "fresh_figure_visual_comparison": "NOT_COMPLETED; source access failed",
+  "computation_status": "PASS_PORTABLE_C13_REPLAY"
+}
