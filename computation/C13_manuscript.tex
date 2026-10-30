@@ -1,0 +1,568 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1.02in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,graphicx,microtype,xcolor}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={The covering number C(13,7,4) is 30},pdfsubject={Covering designs and exact finite verification}}
+\setlength{\parskip}{2.3pt}
+\setlength{\parindent}{15pt}
+\newcommand{\bin}[2]{\binom{#1}{#2}}
+\newcommand{\coverfam}{\mathcal F}
+\newcommand{\cat}{\mathcal C}
+\newcommand{\dom}{\mathcal D}
+\newcommand{\penc}{\mathcal P}
+\newcommand{\XX}{X}
+\newcommand{\YY}{Y}
+\newcommand{\Star}{\operatorname{St}}
+\newcommand{\sig}{\operatorname{sig}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\definecolor{navy}{RGB}{24,46,67}
+\title{\vspace{-1.3em}\bfseries The covering number $C(13,7,4)$ is $30$\\[0.32em]
+\large\normalfont A classification-assisted exact proof}
+\author{John Tripodo}
+\date{29 October 2026}
+\begin{document}
+\maketitle
+\vspace{-1.3em}
+\begin{abstract}\noindent
+We prove that $C(13,7,4)=30$, using the published classification of minimum
+$(12,6,3)$ coverings. In a hypothetical $29$-block $(13,7,4)$ covering,
+incidence counting forces at least five points of degree $15$. Fixing one of
+these points leaves a classified $15$-block link and a budget of only $14$
+blocks outside it. Each of four further degree-$15$ points determines a
+\emph{complete outside pencil}, whose possible forms can be enumerated from
+the same classification. Pairwise agreement of these pencils is necessary.
+An exact census of $68\bin{12}{4}=33{,}660$ labelled root configurations leaves
+$42$ cases after sound consistency filters. An independently structured,
+unpruned join enumerates $280{,}152$ compatible four-pencil tuples; each uses
+$15$ distinct outside blocks, contradicting the budget $14$. A concrete
+$30$-block covering is verified on all $715$ quadruples. We also distinguish
+this computational proof from a subsequent Lean formalization of the global
+finite obstruction, whose mathematical premises are stated explicitly.
+\end{abstract}
+\noindent\textbf{Keywords:} covering designs; covering numbers; finite classification;
+exact enumeration; computational proof; Lean formalization.
+\medskip
+
+\section{The result and its context}
+For positive integers $v\geq k\geq t$, a $(v,k,t)$ \emph{covering} is a
+family $\coverfam\subseteq\bin{X}{k}$, where $|X|=v$, such that every
+$T\in\bin{X}{t}$ is contained in some $B\in\coverfam$. Its minimum cardinality
+is the covering number $C(v,k,t)$. The problem considered here asks for the
+minimum number of seven-element blocks on thirteen points needed to cover
+every four-element subset.
+
+\begin{theorem}[Main result]\label{thm:main}
+\[
+\boxed{C(13,7,4)=30.}
+\]
+\end{theorem}
+
+An explicit construction supplies the upper bound $30$; the contribution
+is the global exclusion of $29$ blocks. Prior tabulations gave the interval
+$28\leq C(13,7,4)\leq30$ \cite{LJCR}, and a separately published,
+formally checked elimination of one minimum-link type does not resolve
+all $68$ types \cite{Dwares}. The present argument eliminates all types,
+not merely one restricted instance. Related recent work on a different
+covering number illustrates the increasing role of independently checked
+finite certificates in design theory \cite{Krug}.
+
+The one external mathematical ingredient is the work of Gordon,
+Patashnik, Petro and Taylor \cite{GPPT}: their Theorem 4.4 proves
+$C(12,6,3)=15$, and their Theorem 5.9 classifies the minimum
+$(12,6,3)$ covers by a Figure~1 completion family and a single
+exceptional Figure~6 cover. Their $68$ nonisomorphic minimum covers
+are \emph{input}, not an original classification claimed here.
+The proof below explains why that classification is enough and
+isolates the precise role of the computation.
+
+\paragraph{Proof in one paragraph.}
+Every point of a hypothetical $29$-block covering occurs in at least
+$15$ blocks, and there are only eight degree units above that baseline;
+hence at least five points have degree exactly $15$. Root at one such
+point. Its $15$ incident blocks determine a classified link, leaving
+just $14$ blocks not containing the root. Each of four further minimum
+points forces a full set of outside blocks. The classification supplies
+exhaustive finite domains for those sets. The computation proves that
+four mutually compatible choices always need at least $15$ outside
+blocks. This is the contradiction.
+
+\section{Why five minimum points are unavoidable}
+Write $X=Y\cup\{\infty\}$ with $|Y|=12$ once a root is chosen.
+For any point $x\in X$, define its degree and link by
+\[
+ d_\coverfam(x):=|\{B\in\coverfam:x\in B\}|,\qquad
+ L_x(\coverfam):=\{B\setminus\{x\}:B\in\coverfam,\ x\in B\}.
+\]
+If $\coverfam$ covers every four-set of $X$, then $L_x(\coverfam)$ covers every
+three-set of $X\setminus\{x\}$. The cited minimum-cover theorem
+therefore implies $d_\coverfam(x)\geq15$ for every $x$.
+
+\begin{lemma}[Five minimum points]\label{lem:five}
+If a $(13,7,4)$ covering has exactly $29$ distinct blocks, at least
+five points have degree $15$.
+\end{lemma}
+\begin{proof}
+Double-count incidences between points and blocks:
+\[
+ \sum_{x\in X}d_\coverfam(x)=7|\coverfam|=7\cdot29=203
+ =13\cdot15+8.
+\]
+Each degree exceeds $15$ by a nonnegative integer. At most eight
+points can have positive excess, leaving at least five of degree $15$.
+\end{proof}
+
+Choose such a point $\infty$. The root link
+$L:=L_\infty(\coverfam)$ has exactly $15$ blocks and is one of the
+published minimum $(12,6,3)$ covers up to relabelling. The
+\emph{outside family}
+\[
+ \coverfam^\circ:=\{B\in\coverfam:\infty\notin B\}
+\]
+contains exactly $29-15=14$ blocks, all seven-subsets of $Y$.
+Choose four other degree-$15$ points $Q\subseteq Y$,
+$|Q|=4$. We now show how they constrain $\coverfam^\circ$.
+
+\section{From classified links to complete outside pencils}
+Let $\cat$ be a set of representatives of the $68$ published
+isomorphism classes of minimum $(12,6,3)$ coverings, each with
+$15$ distinct six-subsets of a labelled twelve-element set.
+Fix a labelled root link $L\in\cat$. For $q\in Y$,
+the root-containing part of the $q$-link is already fixed:
+\begin{equation}\label{eq:star}
+ S_L(q):=\big\{\{\infty\}\cup(A\setminus\{q\}):
+                 A\in L,\ q\in A\big\}.
+\end{equation}
+This is a family of six-subsets of $X\setminus\{q\}$.
+
+Take a classified source link $K\in\cat$ on a twelve-point set $W$,
+a source point $c\in W$, and a bijection
+$\phi:W\to X\setminus\{q\}$ such that $\phi(c)=\infty$ and
+\begin{equation}\label{eq:starmatch}
+ \big\{\phi(A):A\in K,\ c\in A\big\}=S_L(q).
+\end{equation}
+Define the associated \emph{complete outside pencil}
+\begin{equation}\label{eq:pencil}
+ P(L,q;K,c,\phi):=
+ \big\{\{q\}\cup\phi(A): A\in K,\ c\notin A\big\}
+ \subseteq\bin{Y}{7}.
+\end{equation}
+The domain $D_L(q)$ consists of all pencils in
+\eqref{eq:pencil} over all $K,c,\phi$ satisfying
+\eqref{eq:starmatch}. In computation we may first prune $c$ by the
+necessary equality $d_K(c)=d_L(q)$, but the definition of the
+domain itself is unrestricted.
+
+\begin{lemma}[Domain completeness]\label{lem:domain}
+Suppose $\coverfam$ is a $29$-block $(13,7,4)$ covering with root link
+$L$ and $d_\coverfam(q)=15$. Then
+\[
+ P_q:=\{B\in\coverfam^\circ:q\in B\}\in D_L(q).
+\]
+In particular, $P_q$ records \emph{every} outside block through $q$,
+not an arbitrarily chosen subfamily.
+\end{lemma}
+\begin{proof}
+The full link $L_q(\coverfam)$ is a minimum $(12,6,3)$ cover.
+The cited classification gives a source $K\in\cat$ and a bijection
+from its twelve points onto $X\setminus\{q\}$ carrying $K$ to
+$L_q(\coverfam)$. If $c$ maps to $\infty$, the blocks of $K$ containing
+$c$ map precisely to the known star $S_L(q)$.
+The remaining blocks of $K$ are exactly the blocks of the $q$-link
+that avoid $\infty$. Reattaching $q$ to their images gives
+\eqref{eq:pencil}, which is exactly $P_q$.
+\end{proof}
+
+The word \emph{unrestricted} in this construction is essential.
+The full map on the other eleven source points is searched, subject
+to exact star equality. Restricting $\phi$ to a convenient
+automorphism subgroup would not by itself justify exhaustiveness.
+
+\paragraph{Equivariance of domain reuse.}
+The implementations may reuse a domain when two known stars are
+isomorphic. This does not require choosing every isomorphism between
+the target stars. If $g$ is one such isomorphism, extend it by mapping
+the distinguished target point to the new distinguished target point.
+Composition with $g$ bijects every classified source embedding for the
+first star with an embedding for the second, with inverse composition
+by $g^{-1}$. Applying this bijection to all complete pencils proves
+that the transported domain is the entire second domain. Equality of
+coarse invariants alone is never used to authorize transport.
+
+\section{Agreement conditions and the finite obstruction}
+For distinct $q,r\in Q$ and pencils $P\in D_L(q)$,
+$R\in D_L(r)$, call $(P,R)$ \emph{compatible} when
+\begin{equation}\label{eq:pair}
+ \{B\in P:r\in B\}=\{B\in R:q\in B\}.
+\end{equation}
+The two sides are the outside seven-blocks through both points.
+Thus the actual pencils $P_q,P_r$ supplied by Lemma~\ref{lem:domain}
+are pairwise compatible. Also, because each $P_q\subseteq\coverfam^\circ$,
+\begin{equation}\label{eq:budget}
+ \left|\bigcup_{q\in Q}P_q\right|\leq|\coverfam^\circ|=14.
+\end{equation}
+The central finite statement is the following.
+
+\begin{proposition}[Exhaustive four-pencil obstruction]
+\label{prop:finite}
+For every $L\in\cat$ and every $Q\in\bin{Y}{4}$, there are
+no choices $P_q\in D_L(q)$, $q\in Q$, which satisfy every pair
+compatibility equation \eqref{eq:pair} and the union budget
+\eqref{eq:budget}.
+\end{proposition}
+
+\begin{proof}[Exact computer-assisted verification]
+The exhaustive input space contains
+$68\bin{12}{4}=68\cdot495=33{,}660$ \emph{labelled} pairs $(L,Q)$.
+No orbit reduction of the $Q$-sets is needed for this claim.
+
+The computation first rejects an input if some pair of selected points
+has no compatible pair of possible pencils. It then enforces arc
+consistency: any pencil with no compatible partner in another
+selected domain is removed, and this rule repeats until stable.
+These are sound necessary filters. To see the latter formally,
+consider a putative compatible four-pencil choice. Initially each
+actual choice lies in its full domain. If all four remain after a
+round, each is a compatible partner for each of the other three,
+so none can be removed in the next round. By induction a genuine
+compatible choice is never eliminated.
+
+The recorded exact census is:
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}p{0.59\linewidth}r@{}}
+\toprule
+Exhaustive stage & Labelled root/fourset inputs \\
+\midrule
+A pair has no compatible pencil choices & 31,263\\
+Additional inputs closed by sound arc consistency & 2,355\\
+Inputs retained for the final four-way join & 42\\
+\midrule
+Total: $68\bin{12}{4}$ & 33,660\\
+\bottomrule
+\end{tabular}
+\caption{Disjoint partition of the complete Python/C++ finite search.
+The last line is an exhaustive total, not an extrapolation from
+representative foursets.}\label{tab:filter}
+\end{table}
+
+For each of the $42$ residual inputs, a separately written routine
+constructs all six pair-compatibility relations and enumerates every
+four-pencil tuple satisfying them. Importantly, this final routine
+\emph{does not prune by union size}; it computes the literal union
+after joining. Its result is:
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Root type & Residual inputs & Compatible tuples per input
+ & Total tuples \\
+\midrule
+Figure 1 completion types & 37 & 216 & 7,992\\
+Exceptional Figure 6 type & 5 & 54,432 & 272,160\\
+\midrule
+Total & 42 & & 280,152\\
+\bottomrule
+\end{tabular}
+\caption{Independent unpruned join. Every one of the $280{,}152$
+compatible tuples has a union of exactly $15$ distinct outside blocks.}
+\label{tab:join}
+\end{table}
+
+The reconstruction of domains uses the $68$-link catalog,
+with an independent route rebuilding all $28^3=21{,}952$ literal
+Figure-1 completions from the published core and short blocks,
+recovering $67$ completion classes under the construction action,
+and separately including the exceptional Figure-6 link.
+Both implementations reconstruct $68\cdot12=816$ root/point domains,
+agree on the canonical digest of every domain, and obtain
+Tables~\ref{tab:filter} and \ref{tab:join}.
+Python ordinary and optimized executions agree; a distinct C++
+implementation reproduced the decisive totals. The source, manifests,
+independent joins and build receipts are itemized in
+Appendix~\ref{app:reproduce}. No floating-point optimization
+status, solver timeout or unverified infeasibility declaration enters
+the conclusion. Every residual compatible union has $15>14$ blocks,
+so \eqref{eq:budget} is impossible.
+\end{proof}
+
+\section{Proof of optimality}
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Suppose a covering has at most $29$ blocks. Removing duplicate blocks,
+if any, preserves coverage; we can pad with previously unused
+seven-subsets to obtain a covering with exactly $29$ distinct blocks,
+since $\bin{13}{7}=1716$.
+
+By Lemma~\ref{lem:five}, choose five degree-$15$ points. Relabel one
+as $\infty$ and normalize its minimum link to a representative
+$L\in\cat$; this induces a relabelling of the twelve ordinary points.
+Choose the other four minimum points as $Q$.
+Lemma~\ref{lem:domain} supplies one complete outside pencil
+$P_q\in D_L(q)$ for each $q\in Q$. All six compatibility equations
+hold, and the pencils jointly occupy at most the $14$ outside blocks.
+This contradicts Proposition~\ref{prop:finite}. Therefore
+$C(13,7,4)\ge30$. The explicit $30$-block covering in
+Appendix~\ref{app:cover}, checked against every one of the
+$\bin{13}{4}=715$ four-subsets, supplies $C(13,7,4)\le30$.
+\end{proof}
+
+\section{Assurance, formalization and exact scope}
+The human-readable proof relies on the \emph{published} two-part
+1995 result; the computer computation checks the remaining finite
+obstruction. Several independent checks address different risks:
+\begin{enumerate}
+\item \textbf{Source boundary.} The literal Figure-1 and Figure-6
+source blocks were checked against the published article. The
+$21{,}952$ completions, a $576$-element construction action, and the
+$67+1$ catalog decomposition were rebuilt in a separate dependency
+lock. The construction subgroup is used for the completion catalog,
+not as a restriction on full star isomorphisms.
+\item \textbf{Finite search.} Independently structured Python
+implementations reconstruct the entire domain family and agree on
+all $816$ normalized domains; the final independent four-way join
+was deliberately left unpruned by the outside-block budget. The
+recorded native C++ replay reproduces the decisive census.
+\item \textbf{Positive and negative controls.} A valid $30$-block
+cover passes all $715$ coverage tests and retains its actual minimum
+point pencils when the outside budget is correctly set to $15$.
+Synthetic compatible $14$-block data also survives the generic join;
+malformed IDs, corrupt catalog entries and incompatible signatures
+are rejected by focused tests.
+\end{enumerate}
+
+\paragraph{A distinct Lean proof.}
+A later Lean package, in the private \texttt{john-lean-math}
+repository, kernel-checked the global obstruction for actual covers.
+Its elimination is \emph{not} the Python partition in
+Table~\ref{tab:filter}. The Lean census assigns the same $33{,}660$
+positions to $31{,}762$ empty-support exclusions, $1{,}893$ exact
+integer-dual exclusions (including checked transports), and five
+exceptional predecessor cases. These sum to $33{,}660$ but are
+logically different certificate families.
+
+The principal Lean statement
+\texttt{C13.Global.exact30\_after\_published\_results} concludes that
+a $30$-block cover exists and every cover has at least $30$ blocks,
+under two explicit theorem parameters:
+\texttt{PublishedMinimumBound} and
+\texttt{PublishedClassification1995}. Another theorem,
+\texttt{exact30\_after\_published\_classification}, removes the
+first parameter using checked private-triple irredundance of the
+catalog, but \emph{does not} establish independence from the
+minimum-bound part of the historical source proof. The Lean
+classification parameter itself remains unproved within Lean;
+standard-axiom auditing is not a substitute for discharging a
+theorem parameter.
+
+The banked formal build receipt records a source-and-object audit of
+$76{,}982$ declarations, with kernel-oriented checks rather than
+\texttt{native\_decide}. The later root receipt replayed entry
+modules and mutation controls against pinned cached dependencies; it
+\emph{did not} recompile the entire imported dependency tree in that
+later replay. A fresh full rebuild and independent mathematical
+refereeing remain outstanding; no such review is claimed here.
+
+\section{Reproducibility and limits}
+The finite theorem is reproducible from the Python source, literal
+classification inputs, tests, and frozen receipts included in the
+\path{anc/} directory of this submission's source archive. Hexagon
+preserves the source archive alongside the work. Run
+\texttt{python3 anc/reproduce.py} after unpacking it. This portable
+standard-library replay compares two separately structured exact
+implementations, in ordinary and optimized modes, with the frozen
+receipts. The native C++ cross-check described above is historical
+audit evidence; its source is not included in this Python supplement.
+The published classification remains an external mathematical input.
+
+We do not claim to reprove the 1995 link classification, to have
+independently established worldwide research priority, or to have
+received external human peer review. Nor does this theorem classify
+all optimal $30$-block covers. The precise result of the paper is the
+single optimal covering number in Theorem~\ref{thm:main}.
+
+\appendix
+\section[An explicit optimal 30-block covering]{An explicit optimal $30$-block covering}\label{app:cover}
+The blocks below are the published Nurmela--\"Osterg\r{a}rd
+upper-bound construction tabulated by the La Jolla Covering Repository
+\cite{LJCR}, not a new construction claimed here. They are seven-subsets
+of $\{1,2,\ldots,13\}$. Each four-subset is contained in at least one
+of the $30$ blocks. The
+accompanying independent standard-library checker enumerates all
+$715$ possible four-subsets, verifies distinctness and confirms
+$1{,}050=30\bin{7}{4}$ total block/fourset incidences.
+\begin{center}
+\begingroup\footnotesize\setlength{\tabcolsep}{6pt}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Block & Block\\
+\midrule
+$\{1,2,5,6,7,8,9\}$ & $\{1,3,4,5,6,8,10\}$\\
+$\{2,3,6,7,8,9,10\}$ & $\{2,3,4,5,8,9,11\}$\\
+$\{1,3,5,7,8,10,11\}$ & $\{1,2,4,8,9,10,11\}$\\
+$\{1,2,3,5,7,10,12\}$ & $\{1,3,4,5,9,10,12\}$\\
+$\{1,2,4,5,6,11,12\}$ & $\{1,3,6,7,9,11,12\}$\\
+$\{2,6,7,8,9,11,12\}$ & $\{4,6,7,8,9,11,12\}$\\
+$\{2,3,4,6,10,11,12\}$ & $\{5,6,7,9,10,11,12\}$\\
+$\{3,4,5,6,7,9,13\}$ & $\{1,2,3,5,6,10,13\}$\\
+$\{1,4,6,7,9,10,13\}$ & $\{1,2,3,4,7,11,13\}$\\
+$\{2,4,7,8,9,11,13\}$ & $\{2,4,5,7,10,11,13\}$\\
+$\{1,3,5,9,10,11,13\}$ & $\{1,4,5,7,8,12,13\}$\\
+$\{2,4,6,7,8,12,13\}$ & $\{1,2,3,8,9,12,13\}$\\
+$\{3,4,7,8,10,12,13\}$ & $\{2,5,8,9,10,12,13\}$\\
+$\{3,5,6,8,11,12,13\}$ & $\{2,4,6,9,11,12,13\}$\\
+$\{6,7,8,9,11,12,13\}$ & $\{1,6,8,10,11,12,13\}$\\
+\bottomrule
+\end{tabular}
+\endgroup
+\end{center}
+The example is different from the separate banked $30$-block cover in
+\path{known30_control.json}. Both were checked independently on all $715$
+four-subsets in the preparation packet.
+
+\section{Computational protocol and frozen identifiers}\label{app:reproduce}
+The accompanying supplement preserves the exact lower-bound source tree
+under \path{anc/}.
+Its \path{anc/reproduce.py} runs the portable checks from an unpacked
+copy without access to the private repository.
+The source snapshot is research-lab commit
+\path{fabd230929bf17b95d6c74d738f78c553c2e0216}.
+The two verifier entry points are
+\path{verify_pencils.py} and \path{independent_raw_replay.py};
+the independent join is in \path{peer_union_join.py}.
+The frozen inputs and file hashes are recorded in
+\path{minimum_link_catalog.json},
+\path{domain_reconstruction_receipt.json}, and
+\path{verification_manifest.json}.
+The manifest identifies both program inputs and replay outputs.
+
+From that directory, the documented portable commands are:
+\begin{verbatim}
+python3 verify_pencils.py > primary.json
+python3 -O verify_pencils.py > primary-O.json
+python3 independent_raw_replay.py > independent.json
+python3 -O independent_raw_replay.py > independent-O.json
+cmp primary.json primary-O.json
+cmp independent.json independent-O.json
+python3 -m unittest -v test_classified_pencils.py
+\end{verbatim}
+The historical production release gate additionally records a native
+C++ cross-check. The published-dependency audit is in
+\texttt{classification\_dependency\_lock.py}. The independent
+joining routine must count only \emph{actually compatible} tuples;
+its reported Cartesian potential is not the number of checked tuples.
+
+\medskip\noindent
+\textbf{Pinned identity data (original research snapshot):}
+\begin{center}\small
+\begin{tabular}{@{}p{0.41\linewidth}p{0.51\linewidth}@{}}
+\toprule
+Item & Frozen identifier or exact invariant\\
+\midrule
+Research-lab C13 checkpoint & \texttt{eec0acba559a732c98babfab497e884fc2fe9e20}\\
+All root/fourset positions & $33{,}660$\\
+Unpruned compatible tuples & $280{,}152$; every union has size $15$\\
+Lean entry module & \path{C13Global/Final.lean}\\
+Lean fixed main theorem & \path{exact30_after_published_results}\\
+\bottomrule
+\end{tabular}
+\end{center}
+The primary reconstruction domain's complete SHA-256 is the concatenation
+of the following two 32-character hexadecimal strings, in order:
+\begin{center}\small\ttfamily
+425ec3b48e8eecdcc3eb5ac1dbe2555b\\
+28420967ea7db00cb690c1e44ddbcb5e
+\end{center}
+The Lean entry module is in package
+\path{c13-covering-lean/global-census-20261010}.
+The table records existing-source evidence; it is not a claim that
+the entire private lower-bound computation or Lean package was newly
+re-executed for this manuscript revision. The accompanying dated audit records the fresh executions performed for
+this revision, separately from historical Lean assurance.
+The Lean package is not required to reproduce the computational proof
+presented in this paper.
+
+\section{Literal classification input}
+For transcription checking, the Figure~1 core is the following list on
+$\{0,1,\ldots,9,A,B\}$, with $A=10$ and $B=11$:
+\begin{center}\ttfamily\small
+014589\quad 0167AB\quad 2345AB\quad 236789\\
+02468A\quad 02579B\quad 13469B\quad 13578A\\
+03478B\quad 03569A\quad 12479A\quad 12568B.
+\end{center}
+To this core add one six-set extending each of $0123$, $4567$ and
+$89AB$, choosing the other two points from the complementary eight.
+The program enumerates all $28^3$ choices, including choices equivalent
+under relabelling. The construction group has order $576$ and gives
+$67$ representative completions. For completeness of the search it is
+sufficient that every literal completion is in one of these orbits;
+no claim that arbitrary cover isomorphisms preserve the core is needed.
+
+For Figure~6 the labels are $0123456789TE$, with $T=10$ and $E=11$:
+\begin{center}\ttfamily\small
+012345\quad 012678\quad 0129TE\quad 0378TE\quad 0456TE\\
+045789\quad 034569\quad 13689E\quad 14579E\quad 14568T\\
+13457T\quad 23679T\quad 24589T\quad 24567E\quad 23458E.
+\end{center}
+These are transcriptions of the cited classification inputs, not a new
+classification proof. Source-figure comparison and the applicability of
+the published classification must be checked independently of the code.
+
+\section{Finite-verifier logic in pseudocode}\label{app:algorithm}
+The following specifies the logical search performed by the exact
+finite verifier, independently of implementation-level optimizations.
+Full reproducibility requires the released source and input catalog.
+\begin{quote}\small\ttfamily
+for each root link L in the 68-link catalog:\\
+\hspace*{1em}for each Q among the 495 ordinary foursets:\\
+\hspace*{2em}build each complete domain D[L,q], q in Q\\
+\hspace*{2em}if some pair of domains has no compatible pair: continue\\
+\hspace*{2em}repeat: discard values lacking support in another domain\\
+\hspace*{2em}until no change\\
+\hspace*{2em}if some domain is empty: continue\\
+\hspace*{2em}enumerate all four-tuples matching all six pair relations\\
+\hspace*{2em}for each compatible tuple, measure its literal block union\\
+\hspace*{2em}assert union cardinality exceeds 14
+\end{quote}
+Arc-consistency deletion is valid by the induction in the proof of
+Proposition~\ref{prop:finite}. Domain construction is exhaustive by
+Lemma~\ref{lem:domain}, \emph{provided} the cited published
+classification is correct and fully transcribed. The final join does
+not assume a solver's answer is valid merely because it says
+``infeasible.''
+
+\begin{thebibliography}{9}
+\bibitem{GPPT}
+D.~M. Gordon, O.~Patashnik, J.~Petro and H.~Taylor,
+\emph{Minimum $(12,6,3)$ Covers},
+Ars Combinatoria \textbf{40} (1995), 161--177.
+\url{https://combinatorialpress.com/ars-articles/volume-040-ars-articles/minimum-12-6-3-covers/}.
+
+\bibitem{LJCR}
+D.~M. Gordon, \emph{La Jolla Covering Repository},
+$(v,k,t)=(13,7,4)$, historic upper and lower bounds.
+\url{https://ljcr.dmgordon.org/cover/table.html} and
+\url{https://ljcr.dmgordon.org/cover/low_tab.html}.
+
+\bibitem{Dwares}
+E.~Dwares, \emph{Formal elimination of link class 52 in the
+$C(13,7,4)$ search}, public certification project (2026),
+\url{https://github.com/edwares/class52-formal-certification}.
+The certification concerns one class, not the full optimum.
+
+\bibitem{Krug}
+C.~Krug, \emph{The covering number $C(12,6,4)$ is 41},
+preprint (2026), arXiv:2607.23766,
+\url{https://arxiv.org/abs/2607.23766}.
+\end{thebibliography}
+\end{document}
+

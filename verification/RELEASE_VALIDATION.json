@@ -72,5 +72,6 @@
   "classification_input_visual_recheck": {
     "status": "NOT_COMPLETED",
     "note": "The published classification remains an explicit mathematical premise. Original figure transcription needs independent visual review."
-  }
+  },
+  "public_lean_proof_commit": "254ee82fdbc215ad73f732f807a83d69be7c1e22"
 }

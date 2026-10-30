@@ -1,0 +1,16 @@
+test_bad_final (test_rigidity_receipt.Tests.test_bad_final) ... ok
+test_bool_class_count (test_rigidity_receipt.Tests.test_bool_class_count) ... ok
+test_budget14_status (test_rigidity_receipt.Tests.test_budget14_status) ... ok
+test_duplicate_domain (test_rigidity_receipt.Tests.test_duplicate_domain) ... ok
+test_false_cover (test_rigidity_receipt.Tests.test_false_cover) ... ok
+test_false_histogram (test_rigidity_receipt.Tests.test_false_histogram) ... ok
+test_hash (test_rigidity_receipt.Tests.test_hash) ... ok
+test_missing_case (test_rigidity_receipt.Tests.test_missing_case) ... ok
+test_missing_domain (test_rigidity_receipt.Tests.test_missing_domain) ... ok
+test_negative_class_count (test_rigidity_receipt.Tests.test_negative_class_count) ... ok
+test_positive (test_rigidity_receipt.Tests.test_positive) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.072s
+
+OK

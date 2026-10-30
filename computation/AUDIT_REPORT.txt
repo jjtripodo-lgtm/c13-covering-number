@@ -1,0 +1,224 @@
+C(13,7,4) = 30: publication-preparation audit
+29 October 2026 -- private, source-bound review
+
+VERDICT
+The frozen original four-pencil proof survives this audit's exact replays,
+algorithm controls, manuscript witness checks and logical inspection. No
+mathematical or computational contradiction was found in that scoped chain.
+The package is ready to hand to an independent specialist for review. It is
+not yet cleared for public submission. This is an AI-assisted internal audit,
+not an external human referee report or an unconditional Lean certification.
+
+1. EXACT SCOPE AND SOURCE IDENTITY
+
+Primary repository: jjtripodo-lgtm/john-research-lab.
+Observed baseline main: fabd230929bf17b95d6c74d738f78c553c2e0216.
+Original manuscript Git blob: b237c45bc418d25c8cad593cfa2304d1b345dd4f.
+Proof directory: research/horizonmath/c13_classified_pencils/.
+Catalog Git blob: 6962f19c715b8df64f6c531dcaa8b7d1b7de7eb5.
+Every copied proof file was checked against its exact Git blob identity.
+The edited manuscript is a derivative copy; original theorem source is retained
+in the frozen proof reports and identified here. Canonical registries were read
+through their current generated project card; no scientific status was promoted.
+
+An alternative pair-codegree proof already exists. Its provenance explicitly
+imports four further finite exclusions. This packet uses the original direct
+four-pencil proof, keeping that smaller dependency graph. It does not re-prove
+or freshly replay the alternative exclusions, optimal-cover classifications,
+or unrelated historical LP/profile packets.
+
+Current connector code searches returned no results even for known C13 terms;
+index availability was not established. Those empty searches were not used as
+absence evidence. Exact file reads and the current controlling-source card
+were used instead. A complete git checkout was unavailable, so repository-wide
+source archaeology and premerge_research_gate.py --full are NOT_RUN. No claim
+of exhaustive internal novelty discovery or repository-wide health is made.
+
+2. MATHEMATICAL CHAIN INSPECTED
+
+(a) Padding: any covering with at most 29 blocks can be enlarged to exactly 29
+distinct seven-subsets; there are 1,716 possible blocks. No coverage is lost.
+
+(b) Minimum degrees: the link at any point covers all triples on twelve points.
+The published bound C(12,6,3) >= 15 gives degree at least 15. Total degree is
+29*7 = 203 = 13*15+8, forcing at least five points of degree 15.
+
+(c) Root normalization: remove one degree-15 root. Its link is a classified
+15-block cover and exactly 14 blocks remain outside the root. All 495 choices
+of four other points are considered for every one of the 68 root types.
+
+(d) Domain completeness: for another degree-15 point, its entire link is also
+classified. Every source center and every full star-preserving bijection is
+allowed. Non-root source blocks give precisely ALL outside blocks through
+that point. Taking only a convenient subpencil would be invalid; the definition
+and both reconstructed implementations use complete pencils.
+
+(e) Cache transport: one actual star isomorphism suffices to transport an
+already complete domain. Composition and inverse composition give a bijection
+on all source embeddings. Coarse invariant equality alone never suffices.
+This justification has been made explicit in the edited manuscript.
+
+(f) Pair consistency: actual pencils agree exactly on blocks through each pair
+of selected points. Arc deletion removes a value only if it has no possible
+partner in another domain. A genuine compatible assignment survives every round
+by induction. Pair and arc stages are necessary-condition filters only.
+
+(g) Last join: the independent six-relation join applies no union-budget pruning.
+Every compatible residual tuple has union cardinality 15, exceeding the outside
+budget 14. No final covering sufficiency claim is needed: failure of a necessary
+condition already gives the contradiction.
+
+(h) The upper construction is previously known and credited. The literal TeX
+table was parsed and all 715 quadruples checked independently. Removing each
+one of the 30 listed blocks destroys coverage, supplying 30 negative controls.
+
+3. FRESH EXECUTION RESULTS
+
+Python primary normal/-O: PASS, byte-identical to each other and equal to the
+frozen primary receipt. Independent raw-source normal/-O: PASS, byte-identical
+to each other and equal to the frozen independent receipt.
+
+Both routes reconstruct all 816 root/point domains with agreeing digests.
+The raw route regenerates all 21,952 Figure-1 completions, their 576-element
+construction-group action, 67 representatives, and the exceptional Figure 6.
+This checks the finite transcription-derived family, not the published theorem
+that every minimum link lies in that family.
+
+The complete census is:
+  pair rejection:             31,263 inputs
+  additional arc rejection:   2,355 inputs
+  exact residual join:            42 inputs
+  total:                      33,660 inputs
+  compatible residual tuples:280,152
+  every residual union:          15 blocks
+
+Residual types: 37 Figure-1 cases x 216 tuples = 7,992; five Figure-6 cases x
+54,432 tuples = 272,160. Their sum is 280,152. The independent join checks the
+literal six agreement equations again on each enumerated tuple.
+
+C++ strict-warning optimized build: PASS. Independently built UBSan plus
+standard-library assertions: PASS, with byte-identical output and no sanitizer
+diagnostics. Its validator checks 816 domain digests and all 33,660 cases.
+This is another implementation, not an independent proof of the classification.
+
+Existing tests: 13/13 PASS in normal Python; 13/13 PASS under -O. These include
+source reconstruction, malformed inputs, Figure-6 omission and positive controls.
+The existing mapper audit checks all 64 simple graphs on four vertices under all
+24 relabelings (1,536 cases) against brute-force bijections.
+
+Additional audit, deterministic seed 20261029:
+  240 mixed-rank hypergraph pairs on 4, 5 or 6 vertices, including perturbed
+      pairs, checked against ALL vertex permutations for both star mappers;
+  240 pencil-domain instances checked against literal Cartesian-product joins;
+  1,440 budget/arc checks at budgets 0, 7, 13, 14, 15 and 25;
+  120 domain instances have a valid assignment, preventing an always-reject
+      implementation from passing the differential audit;
+  715 manuscript quadruples and 30 single-block-deletion controls.
+Normal and -O differential audit outputs are identical. These bounded controls
+target implementation risk; they do not establish the general correctness of
+Python, C++, the compiler, hardware, or every possible hypergraph algorithm.
+
+Materialization initially introduced a final newline into a catalog copy. The
+byte-integrity guard rejected it before proof execution. The copied bytes were
+restored to their exact upstream Git identities, and all reported successful
+runs use those restored bytes. No upstream proof-source repair was needed.
+
+4. FORMALIZATION ALIGNMENT
+
+The current Lean Final.lean and published-premise assessment were read. Final
+module Git blob: 78d46f3aa0386255c385fb3bb1e03562d17bf59e.
+The exact30_after_published_results theorem takes PublishedMinimumBound and
+PublishedClassification1995 as theorem parameters. The other final theorem
+takes the classification parameter alone using catalog irredundance. This is
+not proof that the 1995 source's minimum-bound argument is dispensable.
+
+The historical root receipt explicitly says cached dependency/source identities
+were checked and top-level modules replayed; the full imported-project audit
+was not rerun there. This audit did not compile Lean or independently verify all
+1,754 dependencies. The manuscript keeps that historical assurance distinct
+from this audit's fresh computational replays. Its Lean census partition is
+different from the Python partition and must not be blended with it.
+
+5. EXTERNAL LITERATURE AND PRIORITY SCREEN
+
+The publisher's GPPT record confirms the 1995 result and 68 minimum covers:
+https://combinatorialpress.com/ars-articles/volume-040-ars-articles/minimum-12-6-3-covers/
+
+The indexed primary PDF text also reproduces Theorem 5.9 with the needed
+Figure-1-completion / Figure-6 alternative. This supports the theorem citation
+but is not a visual transcription check.
+
+Direct retrieval of the author PDF was unavailable and the publisher PDF link
+returned 404. Therefore a NEW visual comparison of every Figure-1/Figure-6 block
+against original PDF pages was NOT completed. Historical source-transcription
+receipts are retained, but they are not represented as a fresh independent read.
+This is the most specific remaining source-review obligation.
+
+The retrieved LJCR listing gives bounds 28..30 and attributes the known witness
+to Nurmela and Ostergard simulated annealing:
+https://ljcr.dmgordon.org/cover/show_cover.php?k=7&t=4&v=13
+Its indexed source can lag the live site. The direct live page failed retrieval.
+
+The public class-52 project explicitly excludes only one link type:
+https://github.com/edwares/class52-formal-certification
+It does not establish the whole value. Its evidence is related prior work,
+not a dependency imported by the current lower-bound implementation.
+
+Krug's distinct C(12,6,4)=41 paper was checked for scope and verification method:
+https://arxiv.org/abs/2607.23766
+It uses certificate checking and is an assurance comparison, not a solution of
+the same parameter cell. Its main result or broader novelty is not audited here.
+
+Multiple exact/spaced parameter searches found no public complete competing
+C(13,7,4)=30 proof in the retrieved results. This is a bounded non-detection,
+not priority clearance. MathSciNet/zbMATH, variant notation such as T(13,9,6),
+recent author archives, and specialist knowledge have not been exhaustively
+screened. No first-in-world assertion should be added on this evidence.
+
+6. MANUSCRIPT AND REPLAY PACKAGE CHANGES
+
+The edited eight-page PDF retains the original direct proof and credited
+upper construction. It adds a proof of domain-cache equivariance, displays the
+literal classification inputs, points to an offline supplement, updates the
+pre-submission date, and separates fresh audit results from historical Lean
+receipts. No new covering-number theorem is claimed by these editorial changes.
+
+Two LaTeX passes complete without overfull-box, unresolved-reference or citation
+warnings. All eight rendered pages were visually inspected as a contact sheet.
+The top-level driver checks integrity, ordinary/optimized equivalence, full
+receipt equality and exact census assertions. The original proof source and
+frozen outputs are retained unchanged. A packaging manifest is an integrity
+check, not a substitute for an externally registered version/DOI.
+
+7. SUBMISSION PLAN AND REMAINING GATES
+
+Recommended first target: Journal of Combinatorial Designs. The official author
+guidelines were retrieved on this audit date:
+https://onlinelibrary.wiley.com/page/journal/15206610/homepage/forauthors.html
+
+They request a review PDF with LaTeX submission, an ORCID, author affiliation
+and contact details, and applicable declarations including data availability,
+funding and conflicts. The current package supplies PDF, TeX and reproducible
+computation. It does not invent the author's contact details, exact ORCID,
+funding declaration, conflict declaration or final AI-use disclosure.
+
+Before submission:
+1. Have an independent covering-design specialist assess the reduction and
+   published theorem's applicability, and compare the literal source blocks
+   directly with an accessible original GPPT article. The exact review questions
+   are sections 2(c)-2(g) and 5 above. No reviewer has been contacted.
+2. Complete the bounded priority screen with specialist bibliographic sources.
+   If a prior complete determination exists, revise the contribution honestly.
+3. Confirm author metadata, acknowledgments, funding/conflicts and an accurate
+   AI-assistance statement under the target journal's current policy. Confirm
+   what source/software rights can accompany the public supplement.
+4. Register a public immutable supplement and insert its actual DOI/URL, then
+   regenerate the final PDF. No fake DOI or provisional public location appears.
+5. Obtain the owner's specific instruction for public archive upload and journal
+   submission. This preparation request has not been treated as permission to
+   contact others, spend money or submit publicly.
+
+Do not delay the computational manuscript solely to remove the published GPPT
+theorem from Lean. If the paper continues to discuss formal assurance in detail,
+a fresh portable full Lean rebuild remains a separately desirable gate. The
+computational proof itself is reproducible without claiming that rebuild.

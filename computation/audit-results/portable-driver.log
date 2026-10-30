@@ -1,0 +1,42 @@
+{
+  "external_referee_review": "NOT_PERFORMED",
+  "lean_rebuild": "NOT_RUN; not needed by computational proof",
+  "manifest_files": 68,
+  "native_requested": false,
+  "published_classification": "External theorem input; not proved by this driver",
+  "runs": {
+    "adversarial": {
+      "exit_code": 0,
+      "seconds": 1.695
+    },
+    "adversarial-O": {
+      "exit_code": 0,
+      "seconds": 2.003
+    },
+    "independent": {
+      "exit_code": 0,
+      "seconds": 88.343
+    },
+    "independent-O": {
+      "exit_code": 0,
+      "seconds": 91.075
+    },
+    "primary": {
+      "exit_code": 0,
+      "seconds": 64.045
+    },
+    "primary-O": {
+      "exit_code": 0,
+      "seconds": 60.831
+    },
+    "tests-normal": {
+      "exit_code": 0,
+      "seconds": 1.525
+    },
+    "tests-optimized": {
+      "exit_code": 0,
+      "seconds": 2.113
+    }
+  },
+  "status": "PASS_PORTABLE_C13_REPLAY"
+}

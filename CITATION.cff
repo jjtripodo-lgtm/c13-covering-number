@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite the manuscript and the immutable repository revision used."
+title: "The covering number C(13,7,4) is 30: A classification-assisted exact proof"
+type: article
+authors:
+  - family-names: Tripodo
+    given-names: John
+    orcid: https://orcid.org/0009-0006-9180-4953
+date-released: 2026-10-29
+url: https://github.com/jjtripodo-lgtm/c13-covering-number
+license: CC-BY-4.0
+abstract: "Classification-assisted exact proof of C(13,7,4)=30, with reproducible computational verification and a Lean proof relative to the published minimum-link classification."

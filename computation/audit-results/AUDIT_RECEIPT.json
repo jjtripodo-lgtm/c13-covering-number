@@ -1,0 +1,15 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "source_snapshot": "fabd230929bf17b95d6c74d738f78c553c2e0216",
+  "primary_status": "PASS_EXACT_ALL68_CLASSIFIED_PENCIL_OBSTRUCTION",
+  "independent_status": "PASS_INDEPENDENT_GLOBAL29_PENCIL_EXCLUSION",
+  "domains": 816,
+  "cases": 33660,
+  "compatible_tuples": 280152,
+  "minimum_union": 15,
+  "native_optimized_ubsan_identical": true,
+  "fresh_lean_rebuild": "NOT_RUN",
+  "full_repository_premerge_gate": "NOT_RUN: complete checkout unavailable",
+  "external_specialist_review": "NOT_PERFORMED"
+}

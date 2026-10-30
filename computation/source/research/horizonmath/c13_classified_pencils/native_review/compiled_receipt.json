@@ -1,0 +1,19 @@
+{
+  "boundary": "Third catalog-relative C++ replay; complete catalog/classification remains independently established by the Python raw-source proof and published theorem.",
+  "class_censuses": 68,
+  "output_sha256": "b06bc67b873b1969da5b0219af89fa9a7c955573084af0855333285e43b368ff",
+  "status": "PASS_COMPILED_DOMAIN_AND_GLOBAL_CENSUS_CROSSCHECK",
+  "summary": {
+    "arc_closed": 2355,
+    "domains": 816,
+    "pair_closed": 31263,
+    "positive30_quadruples": 715,
+    "quadruples": 33660,
+    "retained_positive_pencils": 3,
+    "root_classes": 68,
+    "search_nodes": 55813,
+    "status": "PASS_COMPILED_CATALOG_RELATIVE_PENCIL_EXCLUSION",
+    "union_closed": 42
+  },
+  "verified_domain_hashes": 816
+}

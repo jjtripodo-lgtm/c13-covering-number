@@ -1,0 +1,18 @@
+test_bad_published_control_rejected (test_classified_pencils.ProofControls.test_bad_published_control_rejected) ... ok
+test_catalog_bytes_rejected (test_classified_pencils.ProofControls.test_catalog_bytes_rejected) ... ok
+test_catalog_malformed_fields_rejected (test_classified_pencils.ProofControls.test_catalog_malformed_fields_rejected) ... ok
+test_catalog_positive (test_classified_pencils.ProofControls.test_catalog_positive) ... ok
+test_control_external_point_rejected (test_classified_pencils.ProofControls.test_control_external_point_rejected) ... ok
+test_malformed_union_domains (test_classified_pencils.ProofControls.test_malformed_union_domains) ... ok
+test_missing_figure6_rejected (test_classified_pencils.ProofControls.test_missing_figure6_rejected) ... ok
+test_peer_positive_and_malformed_controls (test_classified_pencils.ProofControls.test_peer_positive_and_malformed_controls) ... ok
+test_published30_cover_pencils_retained (test_classified_pencils.ProofControls.test_published30_cover_pencils_retained) ... ok
+test_star_maps_positive_and_negative (test_classified_pencils.ProofControls.test_star_maps_positive_and_negative) ... ok
+test_union_budget_exact_positive (test_classified_pencils.ProofControls.test_union_budget_exact_positive) ... ok
+test_pointed_star_mappers_match_bruteforce (test_classification_dependency_lock.ClassificationDependencyLockTests.test_pointed_star_mappers_match_bruteforce) ... ok
+test_source_reconstruction (test_classification_dependency_lock.ClassificationDependencyLockTests.test_source_reconstruction) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 1.427s
+
+OK

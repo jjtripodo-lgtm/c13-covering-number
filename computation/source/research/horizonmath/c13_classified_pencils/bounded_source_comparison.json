@@ -1,0 +1,31 @@
+{
+  "scope": "Bounded source comparison/falsification pass only; no novelty or priority clearance",
+  "checked_utc": "2026-10-01T05:57:16Z",
+  "classification_primary": {
+    "url": "https://dmgordon.org/papers/c-12-6-3.pdf",
+    "sha256": "6da3d15935e5eb8eca9e533c60ffb08db48cb335a94f88c007bd449729f8cf79",
+    "page_audit": "3,7,13,15; see primary_source_audit.json"
+  },
+  "heuristic_false_positive": {
+    "url": "https://w1.cirrelt.ca/~toulouse/CD-BL-MT.pdf",
+    "sha256": "264303887b31cada6c5bda69eb64f56800b56b82d16970e481fd9da371441454",
+    "pdf_pages": 41,
+    "inspected_pdf_pages": [
+      28,
+      29,
+      30
+    ],
+    "finding": "Table3 on printedpage28 reports C(13,7,4): LB28,UB30,target b29,Cost3. Preceding printedpage27 definesCost as uncovered t-subsets. Thus this is a29-block near-cover missing3 quadruples, not a29-block construction. Rendered table and column definitions were visually checked."
+  },
+  "other_bounded_sources": [
+    {
+      "url": "https://ljcr.dmgordon.org/cover/show_cover.php?k=7&t=4&v=13",
+      "finding": "Searchcache reports28<=C13<=30 with explicit30-cover. Fresh direct live refresh returnedHTTP502, so current live database state is NOT verified."
+    },
+    {
+      "url": "https://github.com/edwares/class52-formal-certification",
+      "finding": "Indexed author documentation dated2026-07-28 explicitly limits claim toclass52 and disclaims fullC=30/other67classes. Not an exhaustive repository/literature review."
+    }
+  ],
+  "limits": "No comprehensiveMathSciNet/zbMATH review, external expert contact, or original-source priority audit. A failure to find a prior theorem is not evidence of novelty."
+}

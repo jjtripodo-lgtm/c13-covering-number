@@ -1,0 +1,27 @@
+{
+  "schema": "c13-classified-pencil-verification-v1",
+  "files": {
+    "verify_pencils.py": "a1e4cc6803b938dd23222259ee5a26542b84e744d060e769ee4a6f829c6b3578",
+    "independent_raw_replay.py": "26903c3d84db37b0c4dd275f7d57f7febca2e7972df8c426b1c10b08c96f32e5",
+    "independent_source.py": "f4be450f24fdc7c359e9116c5a9ecdcc1e31f926510de16ab77708991dfb3466",
+    "peer_union_join.py": "70163ae6e06bdf634424cfd50b4a9d789bdfe8da5cd5c6592b7cae67e3853229",
+    "test_classified_pencils.py": "1d003dd41c41b1d710cd14d024bda2fb821180e8a15e259811050acd85a57a2c",
+    "primary_replay.json": "4a7d114b8235486c11a9dd1af6cf5fe78434c9a074a913c75bf87567131629e4",
+    "independent_replay.json": "870eb68cfc6d79aa995df85ee39d3fb675b4d67c3054c711dd807fad198568f6",
+    "minimum_link_catalog.json": "019af94696fb4cf543fbc741401141d53126200c3193a21193c6720f81a56510",
+    "domain_reconstruction_receipt.json": "c528f7bb30b8c58ed446d804578aa103db38e774611fe0158b248a3802822497",
+    "known30_control.json": "d4e9e82febc3fdf7fa6c3832e1cebb8c71b75abda04e3879af216d264759ae4d",
+    "primary_source_audit.json": "70b222157a8efbc8efc4173309fe63f58dcf4e51b25fc473e84f81d9a25c31d3",
+    "peer_scientific_review.md": "dc5459302344c43a1f691be8248fcab9769b97d6ed34d9d7de739d0b481870a5",
+    "CLASSIFIED_PENCIL_GLOBAL29_EXCLUSION.md": "44749685ee952ef8f2b9a6333247750b0d10dca5912a9d01be306704f82b3f99",
+    "bounded_source_comparison.json": "e7e10bcd363cadbd29162aba2039e3abb2f05170ac94af75c221030ce98e9fe5"
+  },
+  "checks": {
+    "primary_normal_and_optimized_identical": true,
+    "independent_normal_and_optimized_identical": true,
+    "negative_positive_tests_normal": 11,
+    "negative_positive_tests_optimized": 11,
+    "peer_final_independent_optimized_replay_sha256": "870eb68cfc6d79aa995df85ee39d3fb675b4d67c3054c711dd807fad198568f6"
+  },
+  "claim_boundary": "Exact finite global29 exclusion subject to the credited published minimum-link classification; pending repository landing/review, not a novelty/publication/Lean claim."
+}

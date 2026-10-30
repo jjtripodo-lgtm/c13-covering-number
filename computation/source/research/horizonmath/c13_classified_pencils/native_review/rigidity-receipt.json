@@ -1,0 +1,11 @@
+{
+  "compatible_tuples": 280152,
+  "domains": 816,
+  "foursets": 33660,
+  "joins": 42,
+  "minimum_uncovered": 2,
+  "output_sha256": "cbe121161a06e93d15ad351c09e0d5ae69fe2fbbcd63884f53e421b3346546dc",
+  "sharp_control_minimum_points": 4,
+  "status": "PASS_FULL_BUDGET15_RIGIDITY",
+  "valid30": 0
+}

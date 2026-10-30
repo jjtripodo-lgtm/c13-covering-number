@@ -1,0 +1,54 @@
+{
+  "known30": {
+    "blocks": 30,
+    "covered_quadruples": 715,
+    "degree15_points": [
+      0,
+      4,
+      8,
+      12
+    ],
+    "degrees": [
+      15,
+      16,
+      17,
+      17,
+      15,
+      17,
+      16,
+      17,
+      15,
+      17,
+      16,
+      17,
+      15
+    ]
+  },
+  "known31": {
+    "blocks": 31,
+    "covered_quadruples": 715,
+    "degree15_points": [
+      6,
+      8,
+      9,
+      11,
+      12
+    ],
+    "degrees": [
+      20,
+      18,
+      17,
+      17,
+      16,
+      17,
+      15,
+      17,
+      15,
+      15,
+      20,
+      15,
+      15
+    ]
+  },
+  "status": "PASS_SHARP_MINIMUM_POINT_CONTROLS"
+}

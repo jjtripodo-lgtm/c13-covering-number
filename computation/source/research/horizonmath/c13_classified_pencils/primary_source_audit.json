@@ -1,0 +1,13 @@
+{
+  "source_url": "https://dmgordon.org/papers/c-12-6-3.pdf",
+  "downloaded_utc": "2026-10-01T05:42:57Z",
+  "pdf_sha256": "6da3d15935e5eb8eca9e533c60ffb08db48cb335a94f88c007bd449729f8cf79",
+  "pdf_pages": 15,
+  "inspected_pages": {
+    "3": "Figure1 all12 core6-sets and3 short quartets visually match independent_source.py up to row order",
+    "7": "Theorem4.4 gives C(12,6,3)=15",
+    "13": "Figure6 all15 literal6-sets visually match independent_source.py using T=10,E=11",
+    "15": "Theorem5.9 supplies complete Figure1-completion-or-Figure6 classification;67 figure1 isomorphism count is in following computational remark"
+  },
+  "scope": "Fresh primary-source page/coordinate audit, not an independent reproof of the published classification or priority review. PDF retained only in local review workspace, not redistributed in repository."
+}

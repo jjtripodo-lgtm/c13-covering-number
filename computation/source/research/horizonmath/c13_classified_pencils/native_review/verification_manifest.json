@@ -1,0 +1,137 @@
+{
+  "schema": "c13-native-rigidity-v1",
+  "base_main": "f68a0161098de43ef065635d21590f98b3791692",
+  "files": [
+    {
+      "path": "CLASSIFIED_LINK_OVERLAP_PRINCIPLE.md",
+      "bytes": 3984,
+      "sha256": "ddda4cfe6cf9404bd21f81c3c456f8d606090109607cc9b36b4171bbd08b51df"
+    },
+    {
+      "path": "NATIVE_REPLAY.md",
+      "bytes": 2552,
+      "sha256": "69d5ee0d03c696cc6e1ff0888a33546128347fbab7c817adc64990e5351fb27f"
+    },
+    {
+      "path": "OPTIMAL30_MINIMUM_POINT_RIGIDITY.md",
+      "bytes": 4315,
+      "sha256": "ec88caa6049c05487317963bb2410c755c9bcdd2160174f30dea0d7853ebd97a"
+    },
+    {
+      "path": "catalog_bits.hpp",
+      "bytes": 5610,
+      "sha256": "2511b9ac4749fb102329676b3a263463e4c1fab1bddd3f6f285a36c5c2ef0e82"
+    },
+    {
+      "path": "catalog_provenance.json",
+      "bytes": 280,
+      "sha256": "6e870da94d1bb877584014452ee12d6c17e40ab96effe2f1aefeeb2103ba67ab"
+    },
+    {
+      "path": "check_30_rigidity.cpp",
+      "bytes": 17182,
+      "sha256": "fd55dfb0a381125dfdd926ff33c9a01c40ab393446cce867a647ee9904bcd7c8"
+    },
+    {
+      "path": "check_five_minimum_30.py",
+      "bytes": 4099,
+      "sha256": "0e8a51dad2e0f711730d27c2d1c60d3646582fbedd74e59478f002467fe0a09b"
+    },
+    {
+      "path": "check_pencils.cpp",
+      "bytes": 13283,
+      "sha256": "0ab7dbecb0f820473e69a3aa79f19cc587ca02fa918b45ee685772d843b8dd02"
+    },
+    {
+      "path": "compiled-output.jsonl",
+      "bytes": 99269,
+      "sha256": "b06bc67b873b1969da5b0219af89fa9a7c955573084af0855333285e43b368ff"
+    },
+    {
+      "path": "compiled_receipt.json",
+      "bytes": 708,
+      "sha256": "f6f1bd4b9919985030a1f526ba2905a660b8da287e3285d047c4aa965d4fb203"
+    },
+    {
+      "path": "compiler_versions.txt",
+      "bytes": 91,
+      "sha256": "cf849d858b72fed1ee480e21a87eebda47e762ab808b708790f5d7e58cee0542"
+    },
+    {
+      "path": "five-minimum-30-scout.json",
+      "bytes": 35263,
+      "sha256": "2fa6f9d3c2249c824da6683ed71561ddb551ca8f4977f920819e940840ed08c1"
+    },
+    {
+      "path": "header_check_receipt.json",
+      "bytes": 334,
+      "sha256": "d076262e4da6b50d41bc069fd0cef75ef6003ef467981adcc17bec4ba681ce01"
+    },
+    {
+      "path": "known31_five_minimum_control.json",
+      "bytes": 2880,
+      "sha256": "240aacf444d97df231dc44ffe5b8c27981760bb7387f6c90708ed784b22c50bd"
+    },
+    {
+      "path": "minimum_point_control_receipt.json",
+      "bytes": 640,
+      "sha256": "3a1f9831682f59f640adf883656d51008f6e44431935ce30f526c0f62bb54b91"
+    },
+    {
+      "path": "native-rigidity-budget15.jsonl",
+      "bytes": 105062,
+      "sha256": "cbe121161a06e93d15ad351c09e0d5ae69fe2fbbcd63884f53e421b3346546dc"
+    },
+    {
+      "path": "peer_rigidity_review.md",
+      "bytes": 2530,
+      "sha256": "1e8a1c0dddcefaa267d12f2b4356d465aeed4cb3b9e0ee08acb9e2393ef67d83"
+    },
+    {
+      "path": "prepare_catalog.py",
+      "bytes": 1499,
+      "sha256": "4316761edd46126768bdc054c94ad4bd7c8aa1fffbacda51f9783b07846d4988"
+    },
+    {
+      "path": "rigidity-receipt.json",
+      "bytes": 297,
+      "sha256": "90d6f0748b1a7dc00f52feda19979b19e73f7e2a6f55c83d4b20c75aeacda5e5"
+    },
+    {
+      "path": "rigidity-tests-O.log",
+      "bytes": 918,
+      "sha256": "0fe43a3fc6ff7fba00e4b728402f60148ef3511f6296c547d901ed529fda9878"
+    },
+    {
+      "path": "rigidity-tests.log",
+      "bytes": 918,
+      "sha256": "7ef90b22f9b471369571c3310f6a23cac59fbd68d38f439c873cfffe539d7135"
+    },
+    {
+      "path": "test_rigidity_receipt.py",
+      "bytes": 2129,
+      "sha256": "46eab4c0a19b874f7885300bd2087be90448bf617b6ec57e966c963d2f50f3a5"
+    },
+    {
+      "path": "ubsan_receipt.json",
+      "bytes": 708,
+      "sha256": "f6f1bd4b9919985030a1f526ba2905a660b8da287e3285d047c4aa965d4fb203"
+    },
+    {
+      "path": "validate_compiled.py",
+      "bytes": 1979,
+      "sha256": "9ecadfd112c1dd7aedc1faa1f66f28579e2e4d6d6308ded72010c840525c1e33"
+    },
+    {
+      "path": "validate_rigidity.py",
+      "bytes": 3323,
+      "sha256": "feb83914d88cdcec6450e3129594dcb64ebc48ac5d90834c9aa133617c2aab89"
+    },
+    {
+      "path": "verify_minimum_point_controls.py",
+      "bytes": 1268,
+      "sha256": "fe94331a7be1fd30c7224e2b4ca4bc5b2e67e3b11b7c4487c406fd007aa45a75"
+    }
+  ],
+  "validation": "Native optimized exact replay, peer fresh rebuild, all816 domain hashes; independent Python coverage regeneration normal/-O byte-identical;11 malformed/positive receipt controls both modes; literal30 and31 controls normal/-O. Full repo gate remains parent landing responsibility."
+}
