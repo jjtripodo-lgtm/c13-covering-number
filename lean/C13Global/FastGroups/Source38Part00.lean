@@ -1,0 +1,172 @@
+import C13Global.DirectDual
+import C13Global.FastDual
+import C13Global.FuelMask
+import C13Global.Data.Source38
+namespace C13.Global.FastDual38_000
+open C13.SourceData C13.Enumeration.Census
+set_option Elab.async false
+set_option maxHeartbeats 0
+set_option maxRecDepth 100000
+
+def pointList : List Point := [1,2,7,9]
+def points : Finset C13.Point := {1,2,7,9}
+def columns : List Code := [637,747,829,885,892,971,979,995,1147,1261,1371,1395,1401,1402,1453,1461,1509,1639,1646,1653,1654,1660,1721,1753,1852,1894,1908,1945,1987,2001,2425,2455,2462,2486,2518,2653,2677,2684,2731,2746,2794,2845,2876,2901,2932,2955,2986,3011,3042,3131,3187,3193,3194,3277,3292,3308,3355,3379,3385,3386,3411,3417,3418,3433,3441,3442,3448,3469,3477,3478,3484,3493,3500,3508,3525,3532,3540,3556,3669,3686,3700,3737,3754,3768]
+def rows : List LinearRow := [⟨.covers 71,1,2⟩,⟨.covers 135,1,2⟩,⟨.covers 2563,1,1⟩,⟨.covers 3077,1,1⟩,⟨.covers 3585,1,1⟩,⟨.covers 78,1,2⟩,⟨.covers 142,1,1⟩,⟨.covers 86,1,1⟩,⟨.covers 166,1,1⟩,⟨.covers 774,1,1⟩,⟨.covers 3078,1,1⟩,⟨.covers 202,1,1⟩,⟨.covers 210,1,1⟩,⟨.covers 3586,1,1⟩,⟨.covers 92,1,1⟩,⟨.covers 116,1,1⟩,⟨.covers 180,1,1⟩,⟨.covers 228,1,1⟩,⟨.covers 2820,1,1⟩,⟨.covers 184,1,1⟩,⟨.covers 216,1,1⟩,⟨.covers 928,1,1⟩,⟨.incident 2,8,-1⟩]
+def bound : Int := 1
+
+theorem column_mask : listMask columns = restrictMask universeMask Source38.alphabets pointList := by
+  rw [← fuelListMask_eq]
+  decide +kernel
+
+theorem checked : fastLeafCheck columns Source38.rootCodes link38 points rows bound = true := by
+  apply directLeafCheck_sound
+  decide +kernel
+
+end C13.Global.FastDual38_000
+namespace C13.Global.FastDual38_001
+open C13.SourceData C13.Enumeration.Census
+set_option Elab.async false
+set_option maxHeartbeats 0
+set_option maxRecDepth 100000
+
+def pointList : List Point := [1,2,7,10]
+def points : Finset C13.Point := {1,2,7,10}
+def columns : List Code := [637,747,829,885,889,892,971,979,995,1147,1261,1371,1395,1402,1453,1461,1509,1639,1646,1651,1654,1658,1721,1753,1882,1894,1906,1945,1957,1969,2425,2455,2462,2486,2518,2653,2677,2681,2684,2731,2746,2794,2845,2869,2873,2876,2901,2905,2908,2921,2929,2932,2936,2955,2963,2966,2970,2979,2986,2994,3011,3018,3026,3042,3131,3187,3194,3277,3292,3308,3355,3379,3418,3442,3469,3493,3532,3556,3635,3686,3698,3737,3788,3800]
+def rows : List LinearRow := [⟨.covers 71,1,17⟩,⟨.covers 135,1,13⟩,⟨.covers 75,1,1⟩,⟨.covers 1035,1,4⟩,⟨.covers 83,1,6⟩,⟨.covers 163,1,4⟩,⟨.covers 2563,1,4⟩,⟨.covers 525,1,2⟩,⟨.covers 197,1,3⟩,⟨.covers 773,1,2⟩,⟨.covers 3077,1,8⟩,⟨.covers 3105,1,3⟩,⟨.covers 2625,1,2⟩,⟨.covers 3585,1,8⟩,⟨.covers 78,1,17⟩,⟨.covers 142,1,13⟩,⟨.covers 166,1,9⟩,⟨.covers 198,1,7⟩,⟨.covers 774,1,10⟩,⟨.covers 3078,1,7⟩,⟨.covers 2090,1,2⟩,⟨.covers 330,1,4⟩,⟨.covers 778,1,5⟩,⟨.covers 3082,1,6⟩,⟨.covers 114,1,4⟩,⟨.covers 210,1,4⟩,⟨.covers 226,1,5⟩,⟨.covers 2818,1,1⟩,⟨.covers 3330,1,5⟩,⟨.covers 92,1,1⟩,⟨.covers 172,1,8⟩,⟨.covers 1292,1,3⟩,⟨.covers 2572,1,1⟩,⟨.covers 116,1,2⟩,⟨.covers 180,1,4⟩,⟨.covers 564,1,1⟩,⟨.covers 212,1,1⟩,⟨.covers 1796,1,8⟩,⟨.covers 2820,1,2⟩,⟨.covers 3588,1,10⟩,⟨.covers 184,1,8⟩,⟨.covers 312,1,2⟩,⟨.covers 216,1,8⟩,⟨.covers 2344,1,1⟩,⟨.covers 1800,1,6⟩,⟨.covers 2160,1,1⟩,⟨.covers 1328,1,5⟩,⟨.covers 1424,1,2⟩,⟨.covers 2272,1,3⟩,⟨.covers 928,1,1⟩,⟨.covers 1472,1,8⟩,⟨.incident 1,8,-7⟩,⟨.incident 2,8,-3⟩,⟨.incident 10,8,-5⟩]
+def bound : Int := 4
+
+theorem column_mask : listMask columns = restrictMask universeMask Source38.alphabets pointList := by
+  rw [← fuelListMask_eq]
+  decide +kernel
+
+theorem checked : fastLeafCheck columns Source38.rootCodes link38 points rows bound = true := by
+  apply directLeafCheck_sound
+  decide +kernel
+
+end C13.Global.FastDual38_001
+namespace C13.Global.FastDual38_002
+open C13.SourceData C13.Enumeration.Census
+set_option Elab.async false
+set_option maxHeartbeats 0
+set_option maxRecDepth 100000
+
+def pointList : List Point := [1,2,7,11]
+def points : Finset C13.Point := {1,2,7,11}
+def columns : List Code := [637,747,829,885,889,892,971,979,995,1147,1261,1371,1395,1401,1402,1453,1461,1509,1639,1643,1645,1646,1651,1653,1654,1657,1658,1660,1721,1753,1769,1837,1845,1849,1852,1867,1875,1881,1882,1891,1893,1894,1897,1898,1900,1905,1906,1908,1912,1945,1957,1961,1969,1987,1993,2001,2017,2425,2455,2462,2486,2518,2653,2677,2681,2731,2746,2794,2901,2921,2929,2966,2986,2994,3131,3187,3193,3277,3292,3308,3379,3433,3441,3478,3532,3540,3627,3635,3661,3669,3689,3697,3754,3788,3816]
+def rows : List LinearRow := [⟨.covers 71,1,11⟩,⟨.covers 135,1,11⟩,⟨.covers 267,1,4⟩,⟨.covers 2059,1,11⟩,⟨.covers 83,1,5⟩,⟨.covers 141,1,3⟩,⟨.covers 269,1,4⟩,⟨.covers 2061,1,8⟩,⟨.covers 533,1,1⟩,⟨.covers 773,1,3⟩,⟨.covers 2817,1,7⟩,⟨.covers 3329,1,9⟩,⟨.covers 78,1,11⟩,⟨.covers 142,1,11⟩,⟨.covers 166,1,11⟩,⟨.covers 198,1,4⟩,⟨.covers 1286,1,5⟩,⟨.covers 2566,1,11⟩,⟨.covers 3078,1,5⟩,⟨.covers 202,1,3⟩,⟨.covers 778,1,3⟩,⟨.covers 114,1,5⟩,⟨.covers 210,1,4⟩,⟨.covers 226,1,7⟩,⟨.covers 1794,1,3⟩,⟨.covers 3330,1,1⟩,⟨.covers 92,1,2⟩,⟨.covers 172,1,3⟩,⟨.covers 1292,1,1⟩,⟨.covers 116,1,6⟩,⟨.covers 228,1,5⟩,⟨.covers 1796,1,3⟩,⟨.covers 3588,1,3⟩,⟨.covers 120,1,1⟩,⟨.covers 184,1,7⟩,⟨.covers 312,1,2⟩,⟨.covers 216,1,9⟩,⟨.covers 1304,1,2⟩,⟨.covers 2824,1,4⟩,⟨.covers 3336,1,2⟩,⟨.covers 2160,1,1⟩,⟨.covers 1200,1,3⟩,⟨.covers 1328,1,1⟩,⟨.covers 2608,1,3⟩,⟨.covers 720,1,2⟩,⟨.covers 1808,1,2⟩,⟨.covers 3600,1,7⟩,⟨.covers 928,1,3⟩,⟨.covers 3232,1,3⟩,⟨.covers 1472,1,5⟩,⟨.covers 2496,1,3⟩,⟨.covers 1920,1,2⟩,⟨.covers 3712,1,8⟩]
+def bound : Int := 12
+
+theorem column_mask : listMask columns = restrictMask universeMask Source38.alphabets pointList := by
+  rw [← fuelListMask_eq]
+  decide +kernel
+
+theorem checked : fastLeafCheck columns Source38.rootCodes link38 points rows bound = true := by
+  apply directLeafCheck_sound
+  decide +kernel
+
+end C13.Global.FastDual38_002
+namespace C13.Global.FastDual38_003
+open C13.SourceData C13.Enumeration.Census
+set_option Elab.async false
+set_option maxHeartbeats 0
+set_option maxRecDepth 100000
+
+def pointList : List Point := [1,2,9,10]
+def points : Finset C13.Point := {1,2,9,10}
+def columns : List Code := [247,251,253,254,445,475,499,501,502,505,506,508,637,747,755,757,758,761,762,764,829,885,892,953,956,971,979,985,995,1002,1009,1010,1012,1016,1147,1261,1267,1269,1270,1273,1274,1276,1371,1395,1402,1453,1461,1465,1497,1498,1509,1516,1521,1522,1524,1528,1639,1646,1654,1721,1753,1766,1777,1778,1780,1784,1894,1945,2032,2235,2269,2291,2293,2294,2297,2298,2300,2425,2455,2459,2461,2462,2483,2485,2486,2489,2490,2492,2515,2517,2518,2521,2522,2524,2537,2545,2546,2548,2552,2653,2677,2684,2731,2745,2746,2773,2777,2787,2794,2801,2802,2804,2808,2845,2876,2901,2932,2955,2969,2986,3000,3011,3025,3042,3056,3131,3187,3194,3251,3257,3277,3289,3292,3301,3308,3313,3314,3316,3320,3355,3379,3418,3442,3469,3481,3493,3505,3532,3544,3556,3568,3686,3737,3824]
+def rows : List LinearRow := [⟨.covers 263,1,2⟩,⟨.covers 519,1,2⟩,⟨.covers 75,1,1⟩,⟨.covers 197,1,1⟩,⟨.covers 773,1,1⟩,⟨.covers 1793,1,1⟩,⟨.covers 3585,1,1⟩,⟨.covers 270,1,2⟩,⟨.covers 526,1,2⟩,⟨.covers 198,1,1⟩,⟨.covers 774,1,2⟩,⟨.covers 2566,1,2⟩,⟨.covers 3082,1,1⟩,⟨.covers 2818,1,1⟩,⟨.covers 1292,1,1⟩,⟨.covers 3332,1,1⟩,⟨.covers 1728,1,1⟩,⟨.incident 2,8,-1⟩]
+def bound : Int := 1
+
+theorem column_mask : listMask columns = restrictMask universeMask Source38.alphabets pointList := by
+  rw [← fuelListMask_eq]
+  decide +kernel
+
+theorem checked : fastLeafCheck columns Source38.rootCodes link38 points rows bound = true := by
+  apply directLeafCheck_sound
+  decide +kernel
+
+end C13.Global.FastDual38_003
+namespace C13.Global.FastDual38_004
+open C13.SourceData C13.Enumeration.Census
+set_option Elab.async false
+set_option maxHeartbeats 0
+set_option maxRecDepth 100000
+
+def pointList : List Point := [1,3,7,9]
+def points : Finset C13.Point := {1,3,7,9}
+def columns : List Code := [381,471,829,885,892,967,979,995,1143,1245,1367,1371,1373,1374,1395,1397,1398,1401,1402,1404,1461,1493,1509,1639,1653,1654,1693,1721,1753,1821,1852,1863,1877,1894,1908,1945,1987,2001,2413,2421,2425,2428,2455,2486,2518,2677,2731,2734,2746,2794,2876,2901,2932,2986,3011,3042,3127,3187,3189,3190,3277,3292,3308,3351,3379,3381,3382,3405,3411,3413,3414,3417,3418,3420,3429,3433,3436,3441,3442,3444,3448,3477,3478,3493,3508,3525,3532,3540,3556,3669,3686,3700,3737,3754,3768]
+def rows : List LinearRow := [⟨.covers 75,1,1⟩,⟨.covers 139,1,1⟩,⟨.covers 147,1,1⟩,⟨.covers 99,1,1⟩,⟨.covers 163,1,1⟩,⟨.covers 1059,1,1⟩,⟨.covers 141,1,1⟩,⟨.covers 297,1,1⟩,⟨.covers 777,1,1⟩,⟨.covers 2817,1,1⟩,⟨.covers 3585,1,1⟩,⟨.covers 78,1,1⟩,⟨.covers 166,1,1⟩,⟨.covers 774,1,1⟩,⟨.covers 3078,1,1⟩,⟨.covers 154,1,1⟩,⟨.covers 106,1,1⟩,⟨.covers 202,1,1⟩,⟨.covers 778,1,1⟩,⟨.covers 1546,1,1⟩,⟨.covers 3330,1,1⟩,⟨.covers 3586,1,1⟩,⟨.covers 2316,1,1⟩,⟨.covers 2572,1,1⟩,⟨.covers 180,1,1⟩,⟨.covers 228,1,1⟩,⟨.covers 120,1,1⟩,⟨.covers 1800,1,1⟩,⟨.covers 3336,1,1⟩,⟨.covers 624,1,1⟩,⟨.covers 1200,1,1⟩,⟨.covers 1584,1,1⟩,⟨.covers 2256,1,1⟩,⟨.covers 1728,1,1⟩]
+def bound : Int := 2
+
+theorem column_mask : listMask columns = restrictMask universeMask Source38.alphabets pointList := by
+  rw [← fuelListMask_eq]
+  decide +kernel
+
+theorem checked : fastLeafCheck columns Source38.rootCodes link38 points rows bound = true := by
+  apply directLeafCheck_sound
+  decide +kernel
+
+end C13.Global.FastDual38_004
+namespace C13.Global.FastDual38_005
+open C13.SourceData C13.Enumeration.Census
+set_option Elab.async false
+set_option maxHeartbeats 0
+set_option maxRecDepth 100000
+
+def pointList : List Point := [1,3,7,10]
+def points : Finset C13.Point := {1,3,7,10}
+def columns : List Code := [381,471,829,885,889,892,967,979,995,1143,1245,1371,1374,1395,1398,1402,1461,1509,1639,1651,1654,1693,1721,1753,1882,1894,1906,1945,1957,1969,2413,2421,2425,2428,2455,2486,2518,2677,2731,2734,2746,2794,2861,2869,2873,2876,2901,2917,2921,2924,2929,2932,2936,2951,2963,2966,2979,2982,2986,2994,3011,3014,3026,3042,3127,3187,3190,3277,3292,3308,3379,3418,3442,3493,3532,3556,3623,3635,3686,3698,3725,3737,3788,3800]
+def rows : List LinearRow := [⟨.covers 135,1,1⟩,⟨.covers 1031,1,4⟩,⟨.covers 2055,1,1⟩,⟨.covers 75,1,12⟩,⟨.covers 139,1,12⟩,⟨.covers 147,1,4⟩,⟨.covers 2067,1,1⟩,⟨.covers 99,1,6⟩,⟨.covers 2307,1,2⟩,⟨.covers 269,1,2⟩,⟨.covers 201,1,8⟩,⟨.covers 777,1,3⟩,⟨.covers 1289,1,3⟩,⟨.covers 3081,1,3⟩,⟨.covers 2129,1,3⟩,⟨.covers 705,1,3⟩,⟨.covers 2369,1,2⟩,⟨.covers 1793,1,2⟩,⟨.covers 3329,1,10⟩,⟨.covers 78,1,15⟩,⟨.covers 142,1,5⟩,⟨.covers 198,1,2⟩,⟨.covers 582,1,1⟩,⟨.covers 774,1,3⟩,⟨.covers 3078,1,9⟩,⟨.covers 154,1,4⟩,⟨.covers 106,1,9⟩,⟨.covers 202,1,2⟩,⟨.covers 1546,1,15⟩,⟨.covers 3082,1,14⟩,⟨.covers 114,1,4⟩,⟨.covers 210,1,3⟩,⟨.covers 2818,1,4⟩,⟨.covers 3586,1,1⟩,⟨.covers 156,1,3⟩,⟨.covers 108,1,4⟩,⟨.covers 172,1,7⟩,⟨.covers 1548,1,8⟩,⟨.covers 180,1,7⟩,⟨.covers 564,1,2⟩,⟨.covers 2196,1,2⟩,⟨.covers 2580,1,2⟩,⟨.covers 1604,1,3⟩,⟨.covers 1796,1,7⟩,⟨.covers 120,1,2⟩,⟨.covers 184,1,8⟩,⟨.covers 2824,1,3⟩,⟨.covers 3336,1,2⟩,⟨.covers 2352,1,2⟩,⟨.covers 1584,1,4⟩,⟨.covers 2256,1,3⟩,⟨.covers 1424,1,3⟩,⟨.covers 3216,1,3⟩,⟨.covers 3600,1,5⟩,⟨.covers 928,1,1⟩,⟨.covers 1472,1,10⟩,⟨.incident 1,8,-4⟩,⟨.incident 3,8,-2⟩,⟨.incident 10,8,-4⟩]
+def bound : Int := 7
+
+theorem column_mask : listMask columns = restrictMask universeMask Source38.alphabets pointList := by
+  rw [← fuelListMask_eq]
+  decide +kernel
+
+theorem checked : fastLeafCheck columns Source38.rootCodes link38 points rows bound = true := by
+  apply directLeafCheck_sound
+  decide +kernel
+
+end C13.Global.FastDual38_005
+namespace C13.Global.FastDual38_006
+open C13.SourceData C13.Enumeration.Census
+set_option Elab.async false
+set_option maxHeartbeats 0
+set_option maxRecDepth 100000
+
+def pointList : List Point := [1,3,7,11]
+def points : Finset C13.Point := {1,3,7,11}
+def columns : List Code := [381,471,829,885,889,892,967,979,995,1143,1245,1367,1371,1373,1374,1395,1397,1398,1401,1402,1404,1461,1493,1509,1639,1651,1653,1654,1693,1721,1753,1821,1845,1849,1852,1863,1875,1877,1878,1881,1882,1884,1891,1893,1894,1905,1906,1908,1912,1941,1945,1957,1969,1987,1989,2001,2017,2413,2421,2425,2455,2486,2518,2677,2731,2734,2746,2794,2901,2921,2929,2966,2986,2994,3127,3187,3189,3277,3292,3308,3351,3379,3405,3413,3433,3441,3478,3532,3540,3635,3669,3697,3754,3788,3816]
+def rows : List LinearRow := [⟨.covers 135,1,2⟩,⟨.covers 519,1,2⟩,⟨.covers 75,1,11⟩,⟨.covers 139,1,2⟩,⟨.covers 147,1,6⟩,⟨.covers 99,1,6⟩,⟨.covers 163,1,5⟩,⟨.covers 2307,1,3⟩,⟨.covers 141,1,7⟩,⟨.covers 525,1,4⟩,⟨.covers 169,1,4⟩,⟨.covers 201,1,4⟩,⟨.covers 777,1,4⟩,⟨.covers 2337,1,3⟩,⟨.covers 3105,1,3⟩,⟨.covers 2817,1,4⟩,⟨.covers 3585,1,2⟩,⟨.covers 78,1,11⟩,⟨.covers 142,1,11⟩,⟨.covers 198,1,3⟩,⟨.covers 774,1,4⟩,⟨.covers 3078,1,8⟩,⟨.covers 154,1,11⟩,⟨.covers 106,1,7⟩,⟨.covers 202,1,4⟩,⟨.covers 2314,1,11⟩,⟨.covers 1546,1,4⟩,⟨.covers 3082,1,5⟩,⟨.covers 1794,1,5⟩,⟨.covers 3586,1,2⟩,⟨.covers 300,1,2⟩,⟨.covers 2316,1,6⟩,⟨.covers 116,1,4⟩,⟨.covers 180,1,8⟩,⟨.covers 228,1,6⟩,⟨.covers 1572,1,2⟩,⟨.covers 2820,1,7⟩,⟨.covers 3588,1,9⟩,⟨.covers 120,1,4⟩,⟨.covers 1800,1,3⟩,⟨.covers 3336,1,5⟩,⟨.covers 2160,1,1⟩,⟨.covers 1200,1,3⟩,⟨.covers 2352,1,3⟩,⟨.covers 1584,1,4⟩,⟨.covers 720,1,5⟩,⟨.covers 2256,1,8⟩,⟨.covers 3216,1,3⟩,⟨.covers 1248,1,5⟩,⟨.covers 1728,1,2⟩,⟨.covers 1920,1,4⟩]
+def bound : Int := 12
+
+theorem column_mask : listMask columns = restrictMask universeMask Source38.alphabets pointList := by
+  rw [← fuelListMask_eq]
+  decide +kernel
+
+theorem checked : fastLeafCheck columns Source38.rootCodes link38 points rows bound = true := by
+  apply directLeafCheck_sound
+  decide +kernel
+
+end C13.Global.FastDual38_006
+namespace C13.Global.FastDual38_007
+open C13.SourceData C13.Enumeration.Census
+set_option Elab.async false
+set_option maxHeartbeats 0
+set_option maxRecDepth 100000
+
+def pointList : List Point := [1,3,9,11]
+def points : Finset C13.Point := {1,3,9,11}
+def columns : List Code := [247,251,253,254,381,471,499,501,502,505,506,508,701,743,755,757,758,761,762,764,829,885,892,953,956,967,979,981,995,998,1009,1010,1012,1016,1143,1245,1267,1269,1270,1273,1274,1276,1367,1371,1373,1374,1395,1397,1398,1401,1402,1404,1461,1491,1493,1494,1497,1498,1500,1509,1521,1522,1524,1528,1639,1653,1654,1693,1721,1724,1749,1753,1763,1766,1777,1778,1780,1784,1821,1852,1863,1877,1894,1908,1945,1976,1987,2001,2018,2032,2231,2285,2291,2293,2294,2297,2298,2300,2413,2421,2425,2455,2483,2486,2517,2518,2537,2540,2545,2546,2548,2552,2677,2731,2734,2746,2773,2794,2801,2802,2804,2808,2901,2986,3056,3127,3187,3189,3251,3254,3277,3285,3292,3305,3308,3313,3314,3316,3320,3351,3379,3405,3413,3433,3441,3478,3506,3532,3540,3560,3568,3669,3754,3824]
+def rows : List LinearRow := [⟨.covers 135,1,8⟩,⟨.covers 519,1,2⟩,⟨.covers 1031,1,1⟩,⟨.covers 2055,1,3⟩,⟨.covers 267,1,18⟩,⟨.covers 523,1,23⟩,⟨.covers 2307,1,6⟩,⟨.covers 1539,1,4⟩,⟨.covers 141,1,7⟩,⟨.covers 525,1,4⟩,⟨.covers 2061,1,3⟩,⟨.covers 201,1,7⟩,⟨.covers 777,1,9⟩,⟨.covers 3081,1,4⟩,⟨.covers 2097,1,3⟩,⟨.covers 657,1,2⟩,⟨.covers 2145,1,3⟩,⟨.covers 1185,1,7⟩,⟨.covers 2817,1,19⟩,⟨.covers 3585,1,19⟩,⟨.covers 270,1,18⟩,⟨.covers 526,1,23⟩,⟨.covers 198,1,3⟩,⟨.covers 774,1,3⟩,⟨.covers 3078,1,8⟩,⟨.covers 154,1,2⟩,⟨.covers 106,1,7⟩,⟨.covers 202,1,2⟩,⟨.covers 778,1,23⟩,⟨.covers 1546,1,23⟩,⟨.covers 2098,1,3⟩,⟨.covers 1122,1,4⟩,⟨.covers 1794,1,5⟩,⟨.covers 108,1,1⟩,⟨.covers 2316,1,7⟩,⟨.covers 1548,1,7⟩,⟨.covers 116,1,2⟩,⟨.covers 564,1,1⟩,⟨.covers 212,1,1⟩,⟨.covers 2196,1,1⟩,⟨.covers 612,1,2⟩,⟨.covers 420,1,7⟩,⟨.covers 1188,1,1⟩,⟨.covers 1572,1,1⟩,⟨.covers 568,1,7⟩,⟨.covers 360,1,7⟩,⟨.covers 3336,1,7⟩,⟨.covers 2352,1,6⟩,⟨.covers 1584,1,4⟩,⟨.covers 1232,1,3⟩,⟨.covers 912,1,2⟩,⟨.covers 2704,1,11⟩,⟨.covers 3216,1,1⟩,⟨.covers 1920,1,7⟩,⟨.covers 3456,1,8⟩,⟨.incident 3,8,-4⟩,⟨.incident 9,8,-1⟩,⟨.incident 11,8,-3⟩]
+def bound : Int := 16
+
+theorem column_mask : listMask columns = restrictMask universeMask Source38.alphabets pointList := by
+  rw [← fuelListMask_eq]
+  decide +kernel
+
+theorem checked : fastLeafCheck columns Source38.rootCodes link38 points rows bound = true := by
+  apply directLeafCheck_sound
+  decide +kernel
+
+end C13.Global.FastDual38_007

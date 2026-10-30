@@ -1,0 +1,52 @@
+[
+  {
+    "name": "C13Global.AuditFinal",
+    "source_sha256": "39f16cab04ec7031baff000f8692d03188851a324f6bdd956702b1796d1069db",
+    "unchanged": true,
+    "exit_code": 0,
+    "seconds": 1041.9402256011963,
+    "evidence_mode": "reused_exact_successful_compiled_audit_log_no_duplicate_internal_execution",
+    "object_sha256": "ecfbc1544cbfd17305e7197f16a5ead67cecd0725b47ceee7193227329bcb15b",
+    "log_sha256": "135372280b757e13aac432d8b6c3055fd1b44ff37e35ab01df5c4fcfdcbe6901",
+    "pass": true,
+    "audited_declarations": 76982,
+    "audited_modules": 1750
+  },
+  {
+    "name": "false_dual_score",
+    "source_sha256": "a95b08e8b063dedb1f1b407e0014215c9d1ce0bb46158a8588d2e29ad0e5b71f",
+    "unchanged": true,
+    "exit_code": 1,
+    "seconds": 9.036478757858276,
+    "logical_rejection": true,
+    "pass": true
+  },
+  {
+    "name": "false_target_mask",
+    "source_sha256": "c40fd93ca24706186e33d24a73b80b389395ef113adad2260d9c47126846e5b7",
+    "unchanged": true,
+    "exit_code": 1,
+    "seconds": 5.9269022941589355,
+    "logical_rejection": true,
+    "pass": true
+  },
+  {
+    "name": "missing_private_triple",
+    "source_sha256": "4a80f3df8b9290d5df2058147572e969f24acca1ef4a61099c59db955f8298c2",
+    "unchanged": true,
+    "exit_code": 1,
+    "seconds": 13.548524856567383,
+    "logical_rejection": true,
+    "pass": true
+  },
+  {
+    "name": "omitted_dual_foursets",
+    "source_sha256": "26a4462343c83ea5afadc87848400e13e67438dab6c45c7ecb02062e9d6fdd4c",
+    "unchanged": true,
+    "exit_code": 1,
+    "seconds": 8.589628458023071,
+    "logical_rejection": true,
+    "pass": true
+  }
+]
+

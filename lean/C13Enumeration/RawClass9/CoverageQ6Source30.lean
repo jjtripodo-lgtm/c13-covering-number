@@ -1,0 +1,42 @@
+import C13Enumeration.RawClass9.Table6
+namespace C13.Enumeration.RawClass9.CoverageQ6Source30
+open C13.SourceData C13.Checker.RawSupport C13.Checker.RawSupport.Class9
+set_option Elab.async false
+set_option maxHeartbeats 0
+set_option maxRecDepth 10000
+
+theorem centers_checked : ∀ c : Point, (link link30 c).card = 7 → c ∈ ([2,3,6,7,9,10,11] : List Point) := by decide +kernel
+
+theorem complete (c : Point) (e : Equiv.Perm Point) (he : e hole = 6) (hc : e c = hole)
+    (hs : transport e (link link30 c) = link link09 6) :
+    ∃ p ∈ raw6.supported.domain.2, RepresentsPencil p (emitPencil link30 c 6 e) := by
+  have hcard : (link link30 c).card = 7 := by
+    calc
+      _ = (transport e (link link30 c)).card := (transport_card e _).symm
+      _ = (link link09 6).card := congrArg Finset.card hs
+      _ = 7 := by decide +kernel
+  have hm := centers_checked c hcard
+  simp only [List.mem_cons,List.not_mem_nil,or_false] at hm
+  rcases hm with rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  · have hn : ¬ HasPairCount (link link30 2) 4 := by decide +kernel
+    have hp : HasPairCount (link link09 6) 4 := by decide +kernel
+    exact (hn ((hasPairCount_transport _ _ e hs 4).mpr hp)).elim
+  · have hn : ¬ HasPairCount (link link30 3) 4 := by decide +kernel
+    have hp : HasPairCount (link link09 6) 4 := by decide +kernel
+    exact (hn ((hasPairCount_transport _ _ e hs 4).mpr hp)).elim
+  · have hn : ¬ HasPairCount (link link30 6) 4 := by decide +kernel
+    have hp : HasPairCount (link link09 6) 4 := by decide +kernel
+    exact (hn ((hasPairCount_transport _ _ e hs 4).mpr hp)).elim
+  · have hn : ¬ HasPairCount (link link30 7) 4 := by decide +kernel
+    have hp : HasPairCount (link link09 6) 4 := by decide +kernel
+    exact (hn ((hasPairCount_transport _ _ e hs 4).mpr hp)).elim
+  · have hn : ¬ HasPairCount (link link30 9) 4 := by decide +kernel
+    have hp : HasPairCount (link link09 6) 4 := by decide +kernel
+    exact (hn ((hasPairCount_transport _ _ e hs 4).mpr hp)).elim
+  · have hn : ¬ HasPairCount (link link30 10) 4 := by decide +kernel
+    have hp : HasPairCount (link link09 6) 4 := by decide +kernel
+    exact (hn ((hasPairCount_transport _ _ e hs 4).mpr hp)).elim
+  · have hn : ¬ HasPairCount (link link30 11) 4 := by decide +kernel
+    have hp : HasPairCount (link link09 6) 4 := by decide +kernel
+    exact (hn ((hasPairCount_transport _ _ e hs 4).mpr hp)).elim
+end C13.Enumeration.RawClass9.CoverageQ6Source30

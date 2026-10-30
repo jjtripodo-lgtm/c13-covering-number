@@ -1,0 +1,1154 @@
+{
+  "arc_closed": 2355,
+  "classes": [
+    {
+      "arc_closed": 70,
+      "class_id": 1,
+      "pair_closed": 425,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 35,
+      "class_id": 2,
+      "pair_closed": 460,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 70,
+      "class_id": 3,
+      "pair_closed": 425,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 35,
+      "class_id": 4,
+      "pair_closed": 460,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 5,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 6,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 35,
+      "class_id": 7,
+      "pair_closed": 460,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 35,
+      "class_id": 8,
+      "pair_closed": 460,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 34,
+      "class_id": 9,
+      "pair_closed": 460,
+      "searches": [
+        {
+          "minimum_points": [
+            6,
+            8,
+            9,
+            11
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "11": 6,
+            "6": 1,
+            "8": 6,
+            "9": 6
+          }
+        }
+      ],
+      "union_search_closed": 1
+    },
+    {
+      "arc_closed": 14,
+      "class_id": 10,
+      "pair_closed": 480,
+      "searches": [
+        {
+          "minimum_points": [
+            6,
+            9,
+            10,
+            11
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "10": 6,
+            "11": 6,
+            "6": 1,
+            "9": 6
+          }
+        }
+      ],
+      "union_search_closed": 1
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 11,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 12,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 13,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 14,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 70,
+      "class_id": 15,
+      "pair_closed": 425,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 35,
+      "class_id": 16,
+      "pair_closed": 460,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 70,
+      "class_id": 17,
+      "pair_closed": 425,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 35,
+      "class_id": 18,
+      "pair_closed": 460,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 19,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 20,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 35,
+      "class_id": 21,
+      "pair_closed": 460,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 34,
+      "class_id": 22,
+      "pair_closed": 460,
+      "searches": [
+        {
+          "minimum_points": [
+            6,
+            8,
+            9,
+            11
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "11": 6,
+            "6": 1,
+            "8": 6,
+            "9": 6
+          }
+        }
+      ],
+      "union_search_closed": 1
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 23,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 14,
+      "class_id": 24,
+      "pair_closed": 480,
+      "searches": [
+        {
+          "minimum_points": [
+            7,
+            8,
+            9,
+            11
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "11": 6,
+            "7": 1,
+            "8": 6,
+            "9": 6
+          }
+        }
+      ],
+      "union_search_closed": 1
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 25,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 70,
+      "class_id": 26,
+      "pair_closed": 425,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 69,
+      "class_id": 27,
+      "pair_closed": 425,
+      "searches": [
+        {
+          "minimum_points": [
+            1,
+            2,
+            3,
+            9
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "1": 6,
+            "2": 6,
+            "3": 6,
+            "9": 1
+          }
+        }
+      ],
+      "union_search_closed": 1
+    },
+    {
+      "arc_closed": 34,
+      "class_id": 28,
+      "pair_closed": 460,
+      "searches": [
+        {
+          "minimum_points": [
+            1,
+            2,
+            3,
+            10
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "1": 6,
+            "10": 1,
+            "2": 6,
+            "3": 6
+          }
+        }
+      ],
+      "union_search_closed": 1
+    },
+    {
+      "arc_closed": 35,
+      "class_id": 29,
+      "pair_closed": 460,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 35,
+      "class_id": 30,
+      "pair_closed": 460,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 31,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 35,
+      "class_id": 32,
+      "pair_closed": 460,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 35,
+      "class_id": 33,
+      "pair_closed": 460,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 34,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 35,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 70,
+      "class_id": 36,
+      "pair_closed": 425,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 35,
+      "class_id": 37,
+      "pair_closed": 460,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 35,
+      "class_id": 38,
+      "pair_closed": 460,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 39,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 67,
+      "class_id": 40,
+      "pair_closed": 425,
+      "searches": [
+        {
+          "minimum_points": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "1": 6,
+            "2": 6,
+            "3": 6,
+            "6": 1
+          }
+        },
+        {
+          "minimum_points": [
+            1,
+            2,
+            3,
+            8
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "1": 6,
+            "2": 6,
+            "3": 6,
+            "8": 1
+          }
+        },
+        {
+          "minimum_points": [
+            6,
+            8,
+            9,
+            11
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "11": 6,
+            "6": 1,
+            "8": 6,
+            "9": 6
+          }
+        }
+      ],
+      "union_search_closed": 3
+    },
+    {
+      "arc_closed": 35,
+      "class_id": 41,
+      "pair_closed": 460,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 32,
+      "class_id": 42,
+      "pair_closed": 460,
+      "searches": [
+        {
+          "minimum_points": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "1": 6,
+            "2": 6,
+            "3": 6,
+            "6": 1
+          }
+        },
+        {
+          "minimum_points": [
+            1,
+            2,
+            3,
+            11
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "1": 6,
+            "11": 1,
+            "2": 6,
+            "3": 6
+          }
+        },
+        {
+          "minimum_points": [
+            6,
+            8,
+            9,
+            11
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "11": 6,
+            "6": 1,
+            "8": 6,
+            "9": 6
+          }
+        }
+      ],
+      "union_search_closed": 3
+    },
+    {
+      "arc_closed": 34,
+      "class_id": 43,
+      "pair_closed": 460,
+      "searches": [
+        {
+          "minimum_points": [
+            6,
+            8,
+            9,
+            11
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "11": 6,
+            "6": 1,
+            "8": 6,
+            "9": 6
+          }
+        }
+      ],
+      "union_search_closed": 1
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 44,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 14,
+      "class_id": 45,
+      "pair_closed": 480,
+      "searches": [
+        {
+          "minimum_points": [
+            6,
+            8,
+            9,
+            11
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "11": 6,
+            "6": 1,
+            "8": 6,
+            "9": 6
+          }
+        }
+      ],
+      "union_search_closed": 1
+    },
+    {
+      "arc_closed": 34,
+      "class_id": 46,
+      "pair_closed": 460,
+      "searches": [
+        {
+          "minimum_points": [
+            6,
+            8,
+            9,
+            11
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "11": 6,
+            "6": 1,
+            "8": 6,
+            "9": 6
+          }
+        }
+      ],
+      "union_search_closed": 1
+    },
+    {
+      "arc_closed": 34,
+      "class_id": 47,
+      "pair_closed": 460,
+      "searches": [
+        {
+          "minimum_points": [
+            6,
+            8,
+            9,
+            11
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "11": 6,
+            "6": 1,
+            "8": 6,
+            "9": 6
+          }
+        }
+      ],
+      "union_search_closed": 1
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 48,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 14,
+      "class_id": 49,
+      "pair_closed": 480,
+      "searches": [
+        {
+          "minimum_points": [
+            6,
+            8,
+            9,
+            11
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "11": 6,
+            "6": 1,
+            "8": 6,
+            "9": 6
+          }
+        }
+      ],
+      "union_search_closed": 1
+    },
+    {
+      "arc_closed": 68,
+      "class_id": 50,
+      "pair_closed": 425,
+      "searches": [
+        {
+          "minimum_points": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "1": 6,
+            "2": 6,
+            "3": 6,
+            "6": 1
+          }
+        },
+        {
+          "minimum_points": [
+            6,
+            8,
+            9,
+            11
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "11": 6,
+            "6": 1,
+            "8": 6,
+            "9": 6
+          }
+        }
+      ],
+      "union_search_closed": 2
+    },
+    {
+      "arc_closed": 33,
+      "class_id": 51,
+      "pair_closed": 460,
+      "searches": [
+        {
+          "minimum_points": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "1": 6,
+            "2": 6,
+            "3": 6,
+            "6": 1
+          }
+        },
+        {
+          "minimum_points": [
+            6,
+            8,
+            9,
+            11
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "11": 6,
+            "6": 1,
+            "8": 6,
+            "9": 6
+          }
+        }
+      ],
+      "union_search_closed": 2
+    },
+    {
+      "arc_closed": 126,
+      "class_id": 52,
+      "pair_closed": 369,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 69,
+      "class_id": 53,
+      "pair_closed": 425,
+      "searches": [
+        {
+          "minimum_points": [
+            1,
+            2,
+            3,
+            9
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "1": 6,
+            "2": 6,
+            "3": 6,
+            "9": 1
+          }
+        }
+      ],
+      "union_search_closed": 1
+    },
+    {
+      "arc_closed": 35,
+      "class_id": 54,
+      "pair_closed": 460,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 35,
+      "class_id": 55,
+      "pair_closed": 460,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 33,
+      "class_id": 56,
+      "pair_closed": 460,
+      "searches": [
+        {
+          "minimum_points": [
+            1,
+            2,
+            3,
+            5
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "1": 6,
+            "2": 6,
+            "3": 6,
+            "5": 1
+          }
+        },
+        {
+          "minimum_points": [
+            1,
+            2,
+            3,
+            10
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "1": 6,
+            "10": 1,
+            "2": 6,
+            "3": 6
+          }
+        }
+      ],
+      "union_search_closed": 2
+    },
+    {
+      "arc_closed": 35,
+      "class_id": 57,
+      "pair_closed": 460,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 58,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 59,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 34,
+      "class_id": 60,
+      "pair_closed": 460,
+      "searches": [
+        {
+          "minimum_points": [
+            5,
+            6,
+            7,
+            10
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "10": 1,
+            "5": 6,
+            "6": 6,
+            "7": 6
+          }
+        }
+      ],
+      "union_search_closed": 1
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 61,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 62,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 120,
+      "class_id": 63,
+      "pair_closed": 369,
+      "searches": [
+        {
+          "minimum_points": [
+            0,
+            2,
+            3,
+            5
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "0": 6,
+            "2": 6,
+            "3": 6,
+            "5": 1
+          }
+        },
+        {
+          "minimum_points": [
+            0,
+            2,
+            3,
+            9
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "0": 6,
+            "2": 6,
+            "3": 6,
+            "9": 1
+          }
+        },
+        {
+          "minimum_points": [
+            0,
+            5,
+            6,
+            7
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "0": 1,
+            "5": 6,
+            "6": 6,
+            "7": 6
+          }
+        },
+        {
+          "minimum_points": [
+            0,
+            9,
+            10,
+            11
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "0": 1,
+            "10": 6,
+            "11": 6,
+            "9": 6
+          }
+        },
+        {
+          "minimum_points": [
+            5,
+            6,
+            7,
+            9
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "5": 6,
+            "6": 6,
+            "7": 6,
+            "9": 1
+          }
+        },
+        {
+          "minimum_points": [
+            5,
+            9,
+            10,
+            11
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "10": 6,
+            "11": 6,
+            "5": 1,
+            "9": 6
+          }
+        }
+      ],
+      "union_search_closed": 6
+    },
+    {
+      "arc_closed": 66,
+      "class_id": 64,
+      "pair_closed": 425,
+      "searches": [
+        {
+          "minimum_points": [
+            0,
+            2,
+            3,
+            5
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "0": 6,
+            "2": 6,
+            "3": 6,
+            "5": 1
+          }
+        },
+        {
+          "minimum_points": [
+            0,
+            2,
+            3,
+            11
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "0": 6,
+            "11": 1,
+            "2": 6,
+            "3": 6
+          }
+        },
+        {
+          "minimum_points": [
+            0,
+            9,
+            10,
+            11
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "0": 1,
+            "10": 6,
+            "11": 6,
+            "9": 6
+          }
+        },
+        {
+          "minimum_points": [
+            5,
+            9,
+            10,
+            11
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "10": 6,
+            "11": 6,
+            "5": 1,
+            "9": 6
+          }
+        }
+      ],
+      "union_search_closed": 4
+    },
+    {
+      "arc_closed": 33,
+      "class_id": 65,
+      "pair_closed": 460,
+      "searches": [
+        {
+          "minimum_points": [
+            0,
+            9,
+            10,
+            11
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "0": 1,
+            "10": 6,
+            "11": 6,
+            "9": 6
+          }
+        },
+        {
+          "minimum_points": [
+            5,
+            9,
+            10,
+            11
+          ],
+          "nodes": 44,
+          "post_arc_domains": {
+            "10": 6,
+            "11": 6,
+            "5": 1,
+            "9": 6
+          }
+        }
+      ],
+      "union_search_closed": 2
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 66,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 15,
+      "class_id": 67,
+      "pair_closed": 480,
+      "searches": [],
+      "union_search_closed": 0
+    },
+    {
+      "arc_closed": 0,
+      "class_id": 68,
+      "pair_closed": 490,
+      "searches": [
+        {
+          "minimum_points": [
+            0,
+            1,
+            8,
+            11
+          ],
+          "nodes": 10837,
+          "post_arc_domains": {
+            "0": 252,
+            "1": 252,
+            "11": 252,
+            "8": 252
+          }
+        },
+        {
+          "minimum_points": [
+            0,
+            2,
+            7,
+            10
+          ],
+          "nodes": 10837,
+          "post_arc_domains": {
+            "0": 252,
+            "10": 252,
+            "2": 252,
+            "7": 252
+          }
+        },
+        {
+          "minimum_points": [
+            1,
+            2,
+            6,
+            9
+          ],
+          "nodes": 10837,
+          "post_arc_domains": {
+            "1": 252,
+            "2": 252,
+            "6": 252,
+            "9": 252
+          }
+        },
+        {
+          "minimum_points": [
+            3,
+            6,
+            7,
+            8
+          ],
+          "nodes": 10837,
+          "post_arc_domains": {
+            "3": 252,
+            "6": 252,
+            "7": 252,
+            "8": 252
+          }
+        },
+        {
+          "minimum_points": [
+            3,
+            9,
+            10,
+            11
+          ],
+          "nodes": 10837,
+          "post_arc_domains": {
+            "10": 252,
+            "11": 252,
+            "3": 252,
+            "9": 252
+          }
+        }
+      ],
+      "union_search_closed": 5
+    }
+  ],
+  "classification_dependency": "Published C(12,6,3)=15 and complete Figure1/Figure6 minimum-link classification, independently checked raw Figure1 catalog/domain reconstruction. No external proof of that classification is reproduced here.",
+  "domain_digest": "425ec3b48e8eecdcc3eb5ac1dbe2555b28420967ea7db00cb690c1e44ddbcb5e",
+  "exceptional_figure6_included": true,
+  "figure1_classes": 67,
+  "minimum_point_quadruples": 33660,
+  "pair_closed": 31263,
+  "positive_control": {
+    "additional_minimum_points": [
+      0,
+      4,
+      8
+    ],
+    "cover_blocks": 30,
+    "covered_quadruples": 715,
+    "outside_blocks": 15,
+    "retained_actual_pencils": 3
+  },
+  "remaining_14_block_pencil_assignments": 0,
+  "root_link_classes": 68,
+  "status": "PASS_EXACT_ALL68_CLASSIFIED_PENCIL_OBSTRUCTION",
+  "union_search_closed": 42
+}

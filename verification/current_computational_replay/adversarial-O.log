@@ -1,0 +1,11 @@
+{
+  "boundary": "Finite differential controls, not a new proof or external specialist review.",
+  "budget_and_arc_checks": 1440,
+  "join_cases_with_solution": 120,
+  "literal_product_join_cases": 240,
+  "manuscript_foursets": 715,
+  "mixed_rank_hypergraph_mapper_cases": 240,
+  "seed": 20261029,
+  "single_block_deletions_rejected": 30,
+  "status": "PASS_DIFFERENTIAL_AND_MANUSCRIPT_CONTROLS"
+}

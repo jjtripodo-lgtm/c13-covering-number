@@ -1,0 +1,95 @@
+import C13Enumeration.Canonical.Atlas
+namespace C13.Enumeration.Canonical.Pair53_53
+open C13.SourceData
+set_option Elab.async false
+set_option maxHeartbeats 0
+set_option maxRecDepth 100000
+
+def maps : List (Point → Point) := [![0,1,2,3,4,5,6,7,12,9,10,11,8],![0,1,3,2,4,5,7,6,12,9,11,10,8],![0,5,6,7,4,1,2,3,12,9,10,11,8],![0,5,7,6,4,1,3,2,12,9,11,10,8],![4,1,2,3,0,5,6,7,12,9,10,11,8],![4,1,3,2,0,5,7,6,12,9,11,10,8],![4,5,6,7,0,1,2,3,12,9,10,11,8],![4,5,7,6,0,1,3,2,12,9,11,10,8]]
+def step := starStep (link link54 8) (link link54 8) Data53.matrix Data53.matrix
+def finish := crossMapFinish link54 link54 hole 8 8
+def table0 : Point → Point := anchorTable hole hole 8
+def table1 : Point → Point := put table0 9 9
+def table2 : Point → Point := put table1 10 10
+def table3 : Point → Point := put table2 11 11
+def table4 : Point → Point := put table3 0 0
+def table5 : Point → Point := put table4 1 1
+def table6 : Point → Point := put table5 4 4
+def table7 : Point → Point := put table6 5 5
+def table8 : Point → Point := put table7 2 2
+def table9 : Point → Point := put table8 3 3
+def table10 : Point → Point := put table9 6 6
+def table11 : Point → Point := put table10 7 7
+def table12 : Point → Point := put table4 1 5
+def table13 : Point → Point := put table12 4 4
+def table14 : Point → Point := put table13 5 1
+def table15 : Point → Point := put table14 2 6
+def table16 : Point → Point := put table15 3 7
+def table17 : Point → Point := put table16 6 2
+def table18 : Point → Point := put table17 7 3
+def table19 : Point → Point := put table3 0 4
+def table20 : Point → Point := put table19 1 1
+def table21 : Point → Point := put table20 4 0
+def table22 : Point → Point := put table21 5 5
+def table23 : Point → Point := put table22 2 2
+def table24 : Point → Point := put table23 3 3
+def table25 : Point → Point := put table24 6 6
+def table26 : Point → Point := put table25 7 7
+def table27 : Point → Point := put table19 1 5
+def table28 : Point → Point := put table27 4 0
+def table29 : Point → Point := put table28 5 1
+def table30 : Point → Point := put table29 2 6
+def table31 : Point → Point := put table30 3 7
+def table32 : Point → Point := put table31 6 2
+def table33 : Point → Point := put table32 7 3
+def table34 : Point → Point := put table1 10 11
+def table35 : Point → Point := put table34 11 10
+def table36 : Point → Point := put table35 0 0
+def table37 : Point → Point := put table36 1 1
+def table38 : Point → Point := put table37 4 4
+def table39 : Point → Point := put table38 5 5
+def table40 : Point → Point := put table39 2 3
+def table41 : Point → Point := put table40 3 2
+def table42 : Point → Point := put table41 6 7
+def table43 : Point → Point := put table42 7 6
+def table44 : Point → Point := put table36 1 5
+def table45 : Point → Point := put table44 4 4
+def table46 : Point → Point := put table45 5 1
+def table47 : Point → Point := put table46 2 7
+def table48 : Point → Point := put table47 3 6
+def table49 : Point → Point := put table48 6 3
+def table50 : Point → Point := put table49 7 2
+def table51 : Point → Point := put table35 0 4
+def table52 : Point → Point := put table51 1 1
+def table53 : Point → Point := put table52 4 0
+def table54 : Point → Point := put table53 5 5
+def table55 : Point → Point := put table54 2 3
+def table56 : Point → Point := put table55 3 2
+def table57 : Point → Point := put table56 6 7
+def table58 : Point → Point := put table57 7 6
+def table59 : Point → Point := put table51 1 5
+def table60 : Point → Point := put table59 4 0
+def table61 : Point → Point := put table60 5 1
+def table62 : Point → Point := put table61 2 7
+def table63 : Point → Point := put table62 3 6
+def table64 : Point → Point := put table63 6 3
+def table65 : Point → Point := put table64 7 2
+def table66 : Point → Point := put table0 9 10
+def table67 : Point → Point := put table66 10 9
+def table68 : Point → Point := put table67 11 11
+def table69 : Point → Point := put table68 0 0
+def table70 : Point → Point := put table68 0 4
+def table71 : Point → Point := put table66 10 11
+def table72 : Point → Point := put table71 11 9
+def table73 : Point → Point := put table72 0 0
+def table74 : Point → Point := put table72 0 4
+def table75 : Point → Point := put table0 9 11
+def table76 : Point → Point := put table75 10 9
+def table77 : Point → Point := put table76 11 10
+def table78 : Point → Point := put table77 0 0
+def table79 : Point → Point := put table77 0 4
+def table80 : Point → Point := put table75 10 10
+def table81 : Point → Point := put table80 11 9
+def table82 : Point → Point := put table81 0 0
+def table83 : Point → Point := put table81 0 4
+end C13.Enumeration.Canonical.Pair53_53
